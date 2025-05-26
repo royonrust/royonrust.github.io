@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Roy's Portfolio</title>
-    <!--suppress JSUnresolvedLibraryURL -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // noinspection JSUnresolvedReference
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#211E19',
+                        secondary: '#1B1914',
+                        accent: '#F9A70E',
+                        accent_dark: '#866121',
+                        background: '#000000',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-sans">
 
 <header class="bg-white shadow p-4">
     <nav class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">My Portfolio</h1>
+        <h1 class="text-2xl font-bold">royonrust.github.io</h1>
         <ul class="flex space-x-4">
             <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
             <li><a href="#about" class="hover:text-blue-600">About</a></li>
