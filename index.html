@@ -9,7 +9,7 @@
             theme: {
                 extend: {
                     colors: {
-                        background: '#0F0F0F',
+                        background: 'rgb(15,15,15)',
                         surface: '#1a1a1a',
                         border: '#1F1F1F',
                         text: '#FFFFFF',
@@ -20,6 +20,18 @@
             }
         }
     </script>
+    <style>
+        main::-webkit-scrollbar {
+            width: 0;
+        }
+        main::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0);
+        }
+        main::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
@@ -114,12 +126,12 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 space-y-6 h-[60vh] p-6 bg-background border border-border rounded-[30px]">
-            <!--<section class="h-[30vh] p-6 bg-background border border-border rounded-[30px]">Section 1</section>
+        <main class="flex-1 space-y-6 h-[60vh] p-6 bg-background border border-border rounded-[30px] overflow-y-auto">
+            <section class="h-[30vh] p-6 bg-background border border-border rounded-[30px]">Section 1</section>
             <section class="h-[65vh] p-6 bg-background border border-border rounded-[30px]">Section 2</section>
             <section class="h-[40vh] p-6 bg-background border border-border rounded-[30px]">Section 3</section>
             <section class="h-[40vh] p-6 bg-background border border-border rounded-[30px]">Section 4</section>
-            <section class="h-[40vh] p-6 bg-background border border-border rounded-[30px]">Section 5</section>-->
+            <section class="h-[40vh] p-6 bg-background border border-border rounded-[30px]">Section 5</section>
         </main>
     </div>
 </div>
