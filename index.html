@@ -20,31 +20,30 @@
         }
     </script>
 </head>
-<body class="bg-background text-white font-sans h-full flex flex-col">
-<header class="bg-primary shadow p-4">
-    <nav class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-light">royonrust.github.io</h1>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:text-blue-600">School Projects</a></li>
-            <li><a href="personal.html" class="hover:text-blue-600">Personal Projects</a></li>
-            <li><a href="aboutme.html" class="hover:text-blue-600">About Me</a></li>
-        </ul>
-    </nav>
-</header>
+<body class="bg-gray-900 text-white h-screen flex">
 
-<main class="container mx-auto flex-grow">
-    <section id="about" class="mb-12 pt-6">
-        <h2 class="text-3xl font-bold mb-6">Smirates of the Smaribean Smea</h2>
-        <p class="max-w-xl">pamda</p>
-    </section>
-    <div class="aspect-w-16 aspect-h-9">
-        <iframe src="/videos/GameTrailer.mp4" allowfullscreen></iframe>
+<div class="w-[80%] pt-20 mx-auto flex h-screen">
+    <div class="flex flex-row gap-6">
+        <!-- Nav (short, vertical) -->
+        <nav class="w-fit bg-gray-800 p-4 flex flex-col items-start space-y-4 h-fit">
+            <button class="text-white">Nav 1</button>
+            <button class="text-white">Nav 2</button>
+            <button class="text-white">Nav 3</button>
+        </nav>
+
+        <!-- Hero Section (same height) -->
+        <aside class="w-52 bg-gray-700 p-4 text-white h-fit">
+            Hero Section
+        </aside>
     </div>
-</main>
 
-<footer class="bg-background text-center text-gray-400 p-1 mt-12 shadow-inner">
-    <p>&copy; 2025 Roy Onrust. All rights reserved.</p>
-</footer>
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto bg-gray-900 p-6 pt-0 space-y-6">
+        <section class="bg-gray-800 p-6 rounded h-screen">Section 1</section>
+        <section class="bg-gray-800 p-6 rounded h-screen">Section 2</section>
+        <section class="bg-gray-800 p-6 rounded h-screen">Section 3</section>
+    </main>
+</div>
 
 </body>
 </html>
