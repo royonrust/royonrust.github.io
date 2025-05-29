@@ -1,26 +1,36 @@
 ﻿<!DOCTYPE html>
-<html lang="en-EN" class="h-full">
+<html lang="en-EN" class="h-full font-quantico">
 <head>
     <meta charset="UTF-8">
-    <title>School Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfolio - Roy Onrust</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        background: 'rgb(24,24,24)',
+                        background: 'rgba(24,24,24,0.8)',
                         surface: '#212121',
                         border: '#1F1F1F',
                         text: '#FFFFFF',
                         muted: '#AAAAAA',
                         accent: '#aeff78',
-                    }
+                    },
+                    fontFamily: {
+                        quantico: ['Quantico', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
     <style>
+        @font-face {
+            font-family: 'Quantico';
+            src: url('/Quantico-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         main::-webkit-scrollbar {
             width: 0;
         }
@@ -34,11 +44,17 @@
         .perspective-container-left {
         }
         .tilt-box-left {
-            transform: perspective(700px) rotateY(0deg);
+            transform: perspective(700px) rotateY(7deg);
             transition: transform 0.3s ease;
         }
         .perspective-container-left:hover .tilt-box-left {
             /* transform: perspective(700px) rotateY(10deg); */
+        }
+        @layer utilities {
+            .bg-background-blur {
+                background-color: rgba(24, 24, 24, 0.8);
+                backdrop-filter: blur(10px);
+            }
         }
     </style>
 
@@ -51,98 +67,105 @@
 <!-- Full Page Flex Container -->
 <div class="min-h-screen flex justify-center">
     <!-- Inner Layout Container (Centered Page Content) -->
-    <div class="w-full max-w-[1800px] p-6 flex gap-6 items-center">
+    <div class="w-full max-w-[1800px] p-6 flex gap-0 items-center">
 
         <!-- Sidebar (Nav + Hero Section) -->
         <div class="perspective-container-left">
         <aside class="sticky top-6 h-[80vh] max-h-screen h-fit flex gap-6 items-center tilt-box-left">
             <!-- Nav Bar -->
-            <nav class="w-fit h-fit p-3 space-y-[6px] flex flex-col items-center bg-background rounded-full">
+            <nav class="w-fit h-fit p-3 space-y-[6px] flex flex-col items-center bg-background-blur rounded-full z-[40]">
                 <button class="relative w-16 h-16 flex justify-center items-center bg-surface rounded-full transition group">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                         class="w-10 h-10 text-white transition-colors duration-200 group-hover:text-accent">
+                         class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
                         <path fill-rule="evenodd" d="M12 3.75a6.715 6.715 0 0 0-3.722 1.118.75.75 0 1 1-.828-1.25 8.25 8.25 0 0 1 12.8 6.883c0 3.014-.574 5.897-1.62 8.543a.75.75 0 0 1-1.395-.551A21.69 21.69 0 0 0 18.75 10.5 6.75 6.75 0 0 0 12 3.75ZM6.157 5.739a.75.75 0 0 1 .21 1.04A6.715 6.715 0 0 0 5.25 10.5c0 1.613-.463 3.12-1.265 4.393a.75.75 0 0 1-1.27-.8A6.715 6.715 0 0 0 3.75 10.5c0-1.68.503-3.246 1.367-4.55a.75.75 0 0 1 1.04-.211ZM12 7.5a3 3 0 0 0-3 3c0 3.1-1.176 5.927-3.105 8.056a.75.75 0 1 1-1.112-1.008A10.459 10.459 0 0 0 7.5 10.5a4.5 4.5 0 1 1 9 0c0 .547-.022 1.09-.067 1.626a.75.75 0 0 1-1.495-.123c.041-.495.062-.996.062-1.503a3 3 0 0 0-3-3Zm0 2.25a.75.75 0 0 1 .75.75c0 3.908-1.424 7.485-3.781 10.238a.75.75 0 0 1-1.14-.975A14.19 14.19 0 0 0 11.25 10.5a.75.75 0 0 1 .75-.75Zm3.239 5.183a.75.75 0 0 1 .515.927 19.417 19.417 0 0 1-2.585 5.544.75.75 0 0 1-1.243-.84 17.915 17.915 0 0 0 2.386-5.116.75.75 0 0 1 .927-.515Z" clip-rule="evenodd" />
                     </svg>
                     <span class="absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap
-                    bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
-                    opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                        bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
+                        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 translate-x-0 group-hover:translate-x-1
+                        transition-all duration-200 ease-in-out pointer-events-none z-50">
                     ABOUT</span>
                 </button>
 
                 <button class="group w-16 h-16 bg-surface rounded-full flex items-center justify-center transition relative">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                         class="w-10 h-10 text-white transition-colors duration-200 group-hover:text-accent">
+                         class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
                         <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
                     </svg>
                     <span class="absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap
-                    bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
-                    opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                        bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
+                        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 translate-x-0 group-hover:translate-x-1
+                        transition-all duration-200 ease-in-out pointer-events-none z-50">
                     RESUME</span>
                 </button>
 
                 <button class="group w-16 h-16 bg-surface rounded-full flex items-center justify-center transition relative">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                         class="w-10 h-10 text-white transition-colors duration-200 group-hover:text-accent">
+                         class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
                         <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
                         <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
                         <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
                     </svg>
                     <span class="absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap
-                    bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
-                    opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                        bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
+                        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 translate-x-0 group-hover:translate-x-1
+                        transition-all duration-200 ease-in-out pointer-events-none z-50">
                     SCHOOL PROJECTS</span>
                 </button>
 
                 <button class="group w-16 h-16 bg-surface rounded-full flex items-center justify-center transition relative">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                         class="w-10 h-10 text-white transition-colors duration-200 group-hover:text-accent">
+                         class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
                         <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
                     </svg>
                     <span class="absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap
-                    bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
-                    opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                        bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
+                        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 translate-x-0 group-hover:translate-x-1
+                        transition-all duration-200 ease-in-out pointer-events-none z-50">
                     PERSONAL PROJECTS</span>
                 </button>
 
                 <button class="group w-16 h-16 bg-surface rounded-full flex items-center justify-center transition relative">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                         class="w-10 h-10 text-white transition-colors duration-200 group-hover:text-accent">
+                         class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
                         <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                         <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                     </svg>
                     <span class="absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap
-                    bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
-                    opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
-                    CONTACT</span>
+                        bg-accent text-background text-[20px] rounded-[12px] px-2 py-1
+                        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 translate-x-0 group-hover:translate-x-1
+                        transition-all duration-200 ease-in-out pointer-events-none z-50">
+                        CONTACT
+                    </span>
+
                 </button>
 
             </nav>
 
             <!-- Hero Section -->
-            <div class="relative w-[35vh] h-[60vh] p-6 space-y-4 flex flex-col items-center bg-[url('/images/roycropbw.jpg')] bg-cover bg-center rounded-[30px] text-center">
+            <div class="relative w-[45vh] h-[62.5vh] p-6 ml-[-69px] space-y-4 flex flex-col items-center bg-[url('/images/roycropbw.jpg')] bg-cover bg-center rounded-[30px] text-center">
 
                 <!-- Blurred & dark overlay on bottom 40% -->
                 <div class="absolute bottom-0 left-0 w-full h-[30%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
               flex flex-col items-center justify-center space-y-2 px-4 text-center">
 
-                    <p class="text-sm text-muted tracking-wide uppercase z-10">Game Developer</p>
-                    <h1 class="font-semibold text-3xl text-text z-10">Roy Onrust</h1>
+                    <h1 class="font-semibold text-5xl text-text">Roy Onrust</h1>
+                    <p id="rotating-text" class="text-2xl text-muted tracking-wide uppercase transition-opacity duration-300 ease-in-out">Game Developer</p>
 
-                    <div class="mt-2 pt-6 space-x-4 flex z-10 justify-center">
+                    <div class="mt-2 pt-6 space-x-4 flex justify-center">
                         <a href="https://github.com/royonrust" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/github.png')] bg-center bg-no-repeat bg-contain hover:bg-accent transition">
+                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/github.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
                         </a>
                         <a href="https://www.instagram.com/roy.onrust/" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/instagram.png')] bg-center bg-no-repeat bg-contain hover:bg-accent transition">
+                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/instagram.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
                         </a>
                         <a href="https://www.youtube.com/@royonrust" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/youtube.png')] bg-center bg-no-repeat bg-contain hover:bg-accent transition">
+                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/youtube.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
                         </a>
                         <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/linkedin.png')] bg-center bg-no-repeat bg-contain hover:bg-accent transition">
+                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/linkedin.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
                         </a>
                         <a href="https://discord.com/users/430700035982753812" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/discord.png')] bg-center bg-no-repeat bg-contain hover:bg-accent transition">
+                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/discord.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
                         </a>
                     </div>
                 </div>
@@ -151,13 +174,29 @@
         </div>
 
         <!-- Main Content -->
-        <main class="flex-1 space-y-6 h-[60vh] p-6 bg-background border border-border rounded-[30px] overflow-y-auto tilt-box-right">
-            <section class="h-[30vh] p-6 bg-background border border-border rounded-[30px]">Section 1</section>
+        <main class="flex-1 space-y-6 h-[60vh] p-6 bg-background-blur border border-border rounded-[30px] overflow-y-auto tilt-box-right">
+            <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
         </main>
     </div>
 </div>
 
 </body>
+<script>
+    const lines = ["Game Developer", "3D Artist", "Programmer", "Game Designer", "Generalist"];
+    let index = 0;
+
+    const textEl = document.getElementById("rotating-text");
+
+    setInterval(() => {
+        index = (index + 1) % lines.length;
+        textEl.classList.add("opacity-0");
+
+        setTimeout(() => {
+            textEl.textContent = lines[index];
+            textEl.classList.remove("opacity-0");
+        }, 400); // match this with transition duration
+    }, 3000);
+</script>
 </html>
 
 
