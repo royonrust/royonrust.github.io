@@ -16,9 +16,11 @@ main::-webkit-scrollbar-thumb {
 
 .perspective-container-left {
 }
-.tilt-box-left {
-    transform: perspective(700px) rotateY(7deg);
-    transition: transform 0.3s ease;
+@media (min-width: 1023px) {
+    .tilt-box-left {
+        transform: perspective(700px) rotateY(7deg);
+        transition: transform 0.3s ease;
+    }
 }
 .perspective-container-left:hover .tilt-box-left {
     /* transform: perspective(700px) rotateY(10deg); */

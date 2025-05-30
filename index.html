@@ -25,7 +25,6 @@
             }
         }
     </script>
-    <script src="js/script.js"></script>
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
@@ -35,13 +34,10 @@
 <!-- Full Page Flex Container -->
 <div class="min-h-screen flex justify-center">
     <!-- Inner Layout Container (Centered Page Content) -->
-    <div class="w-full max-w-[1800px] p-6 flex gap-0 items-center">
+    <div class="w-full lg:max-w-[1800px] p-6 flex flex-col lg:flex-row gap-0 items-center">
 
-        <!-- Sidebar (Nav + Hero Section) -->
-        <div class="perspective-container-left">
-        <aside class="sticky top-6 h-[80vh] max-h-screen h-fit flex gap-6 items-center tilt-box-left">
-            <!-- Nav Bar -->
-            <nav class="w-fit h-fit p-3 space-y-[6px] flex flex-col items-center bg-background-blur rounded-full z-[40]">
+        <!-- Nav Bar -->
+        <nav class="sticky top-6 w-full lg:w-fit h-fit p-3 space-y-[6px] flex flex-row justify-between lg:flex-col items-center bg-background-blur rounded-full z-[40] tilt-box-left">
                 <button class="relative w-16 h-16 flex justify-center items-center bg-surface rounded-full transition group">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                          class="w-10 h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
@@ -108,47 +104,50 @@
                 </button>
 
             </nav>
+        <aside class="flex lg:flex-row flex-col lg:sticky gap-6 w-full lg:w-auto top-6 flex gap-6 items-center tilt-box-left">
 
             <!-- Hero Section -->
-            <div class="relative w-[45vh] h-[62.5vh] p-6 ml-[-69px] space-y-4 flex flex-col items-center bg-[url('/images/roycropbw.jpg')] bg-cover bg-center rounded-[30px] text-center">
+            <div class="relative pt-[30em] mt-[1em] lg:mt-0 mb-6 lg:mb-0 w-full lg:w-[45vh] h-auto lg:h-[62.5vh] lg:ml-[-1.5em] p-4 flex flex-col justify-end rounded-[30px] overflow-hidden text-[1.3vh]">
 
-                <!-- Blurred & dark overlay on bottom 40% -->
-                <div class="absolute bottom-0 left-0 w-full h-[30%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
-              flex flex-col items-center justify-center space-y-2 px-4 text-center">
+                <div class="absolute inset-0 bg-[url('/images/roycropbw.jpg')] bg-cover bg-center rounded-[30px] z-0"></div>
 
-                    <h1 class="font-semibold text-5xl text-text">Roy Onrust</h1>
-                    <p id="rotating-text" class="text-2xl text-muted tracking-wide uppercase transition-opacity duration-300 ease-in-out">Game Developer</p>
+                <div class="absolute bottom-0 left-0 w-full h-[35%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
+              flex flex-col items-center justify-center space-y-2 px-4 text-center"></div>
 
-                    <div class="mt-2 pt-6 space-x-4 flex justify-center">
+                <div class="relative z-20 flex flex-col items-center justify-end h-full pb-[2vh] space-y-[1.5vh]">
+
+                    <h1 class="font-semibold text-text text-[3em] lg:text-[4em] leading-none">Roy Onrust</h1>
+                    <p id="rotating-text" class="uppercase text-muted tracking-wider text-[1.25em] lg:text-[2em] transition-opacity duration-300 ease-in-out">Game Developer</p>
+
+                    <div class="flex gap-[2vh] pt-[1vh]">
                         <a href="https://github.com/royonrust" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/github.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
-                        </a>
+                           class="w-[3.5vh] h-[3.5vh] bg-muted rounded-[30%] bg-[url('/icons/github.png')] bg-center bg-no-repeat bg-contain hover:scale-110 transition"></a>
                         <a href="https://www.instagram.com/roy.onrust/" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/instagram.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
-                        </a>
+                           class="w-[3.5vh] h-[3.5vh] bg-muted rounded-[30%] bg-[url('/icons/instagram.png')] bg-center bg-no-repeat bg-contain hover:scale-110 transition"></a>
                         <a href="https://www.youtube.com/@royonrust" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/youtube.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
-                        </a>
+                           class="w-[3.5vh] h-[3.5vh] bg-muted rounded-[30%] bg-[url('/icons/youtube.png')] bg-center bg-no-repeat bg-contain hover:scale-110 transition"></a>
                         <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/linkedin.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
-                        </a>
+                           class="w-[3.5vh] h-[3.5vh] bg-muted rounded-[30%] bg-[url('/icons/linkedin.png')] bg-center bg-no-repeat bg-contain hover:scale-110 transition"></a>
                         <a href="https://discord.com/users/430700035982753812" target="_blank"
-                           class="w-10 h-10 bg-muted rounded-[30%] bg-[url('/icons/discord.png')] bg-center bg-no-repeat bg-contain hover:scale-110 hover:brightness-75 transition duration-150">
-                        </a>
+                           class="w-[3.5vh] h-[3.5vh] bg-muted rounded-[30%] bg-[url('/icons/discord.png')] bg-center bg-no-repeat bg-contain hover:scale-110 transition"></a>
                     </div>
                 </div>
             </div>
+
         </aside>
-        </div>
 
         <!-- Main Content -->
-        <main class="flex-1 space-y-6 h-[60vh] p-6 bg-background-blur border border-border rounded-[30px] overflow-y-auto tilt-box-right">
+        <main class="w-full flex-1 space-y-6 h-[60vh] p-6 bg-background-blur border border-border rounded-[30px] overflow-y-auto tilt-box-right">
+            <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
+            <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
+            <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
+            <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
             <section class="h-[30vh] p-6 bg-surface border border-border rounded-[30px]">Nothing here yet...</section>
         </main>
     </div>
 </div>
 
-</body>
+<script src="js/script.js"></script></body>
 </html>
 
 
