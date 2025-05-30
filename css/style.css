@@ -1,0 +1,31 @@
+﻿@font-face {
+    font-family: 'Quantico';
+    src: url('/fonts/Quantico-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+main::-webkit-scrollbar {
+    width: 0;
+}
+main::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.perspective-container-left {
+}
+.tilt-box-left {
+    transform: perspective(700px) rotateY(7deg);
+    transition: transform 0.3s ease;
+}
+.perspective-container-left:hover .tilt-box-left {
+    /* transform: perspective(700px) rotateY(10deg); */
+}
+@layer utilities {
+    .bg-background-blur {
+        background-color: rgba(24, 24, 24, 0.8);
+        backdrop-filter: blur(10px);
+    }
+}

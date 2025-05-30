@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en-EN" class="h-full font-quantico">
+<html lang="en" class="h-full font-quantico">
 <head>
+    <title>Portfolio - Roy Onrust</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <title>Portfolio - Roy Onrust</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,40 +25,7 @@
             }
         }
     </script>
-    <style>
-        @font-face {
-            font-family: 'Quantico';
-            src: url('/Quantico-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        main::-webkit-scrollbar {
-            width: 0;
-        }
-        main::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0);
-        }
-        main::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0);
-        }
-
-        .perspective-container-left {
-        }
-        .tilt-box-left {
-            transform: perspective(700px) rotateY(7deg);
-            transition: transform 0.3s ease;
-        }
-        .perspective-container-left:hover .tilt-box-left {
-            /* transform: perspective(700px) rotateY(10deg); */
-        }
-        @layer utilities {
-            .bg-background-blur {
-                background-color: rgba(24, 24, 24, 0.8);
-                backdrop-filter: blur(10px);
-            }
-        }
-    </style>
-
+    <script src="js/script.js"></script>
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
@@ -181,22 +149,6 @@
 </div>
 
 </body>
-<script>
-    const lines = ["Game Developer", "3D Artist", "Programmer", "Game Designer", "Generalist"];
-    let index = 0;
-
-    const textEl = document.getElementById("rotating-text");
-
-    setInterval(() => {
-        index = (index + 1) % lines.length;
-        textEl.classList.add("opacity-0");
-
-        setTimeout(() => {
-            textEl.textContent = lines[index];
-            textEl.classList.remove("opacity-0");
-        }, 400); // match this with transition duration
-    }, 3000);
-</script>
 </html>
 
 
