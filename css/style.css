@@ -31,3 +31,10 @@ main::-webkit-scrollbar-thumb {
         backdrop-filter: blur(10px);
     }
 }
+button.active {
+    color: #aeff78;
+}
+
+button.active svg {
+    color: #aeff78;
+}

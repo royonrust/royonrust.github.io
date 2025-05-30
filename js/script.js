@@ -13,27 +13,47 @@ setInterval(() => {
     }, 400);//Duration
 }, 3000);
 
-const content = document.getElementById("page-content");
-const sections = document.getElementById("sections");
+let currentSectionId = 'about-section';
+let isAnimating = false;
 
-document.querySelectorAll("a[data-section]").forEach(link => {
-    link.addEventListener("click", async (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute("data-section");
-        const newSection = sections.querySelector(`#${targetId}-section`);
+function showSection(targetId) {
+    if (targetId === currentSectionId || isAnimating) return; // ignore if animating or same section
 
-        if (!newSection) return;
+    isAnimating = true; // lock animations
 
-        // Fade out current content
-        content.classList.add("opacity-0");
+    const oldSection = document.getElementById(currentSectionId);
+    const newSection = document.getElementById(targetId);
 
-        // Wait for fade-out transition
-        await new Promise(r => setTimeout(r, 300));
+    // Prepare new section for fade-in
+    newSection.classList.remove('hidden', 'opacity-0', '-translate-x-5', 'pointer-events-none');
+    newSection.classList.add('opacity-0', '-translate-x-5', 'pointer-events-none');
 
-        // Replace content
-        content.innerHTML = newSection.innerHTML;
+    // Force reflow
+    newSection.offsetHeight;
 
-        // Fade in new content
-        content.classList.remove("opacity-0");
+    // Animate new section in
+    newSection.classList.remove('opacity-0', '-translate-x-5', 'pointer-events-none');
+    newSection.classList.add('opacity-100', 'translate-x-0');
+
+    // Animate old section out
+    oldSection.classList.remove('opacity-100', 'translate-x-0');
+    oldSection.classList.add('opacity-0', '-translate-x-5', 'pointer-events-none');
+
+    // Update active state on navbar buttons
+    const navButtons = document.querySelectorAll('nav button');
+    navButtons.forEach(btn => {
+        const btnTarget = btn.dataset.section;
+        if (btnTarget === targetId) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
     });
-});
+
+    // After animation ends, hide old section and unlock
+    setTimeout(() => {
+        oldSection.classList.add('hidden');
+        currentSectionId = targetId;
+        isAnimating = false; // unlock
+    }, 500); // match your CSS duration
+}
