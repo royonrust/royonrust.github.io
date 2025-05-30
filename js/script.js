@@ -12,3 +12,28 @@ setInterval(() => {
         textEl.classList.remove("opacity-0");
     }, 400);//Duration
 }, 3000);
+
+const content = document.getElementById("page-content");
+const sections = document.getElementById("sections");
+
+document.querySelectorAll("a[data-section]").forEach(link => {
+    link.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("data-section");
+        const newSection = sections.querySelector(`#${targetId}-section`);
+
+        if (!newSection) return;
+
+        // Fade out current content
+        content.classList.add("opacity-0");
+
+        // Wait for fade-out transition
+        await new Promise(r => setTimeout(r, 300));
+
+        // Replace content
+        content.innerHTML = newSection.innerHTML;
+
+        // Fade in new content
+        content.classList.remove("opacity-0");
+    });
+});
