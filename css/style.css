@@ -32,9 +32,9 @@ main::-webkit-scrollbar-thumb {
     }
 }
 button.active {
-    color: #aeff78;
+    color: #96f358;
 }
 
 button.active svg {
-    color: #aeff78;
+    color: #96f358;
 }
