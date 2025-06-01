@@ -7,10 +7,27 @@
 main::-webkit-scrollbar {
     width: 0;
 }
+@media (min-width: 1023px) {
+    main::-webkit-scrollbar {
+        width: 6px;
+    }
+}
 main::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
+    background: rgb(30, 30, 30);
+    backdrop-filter: blur(10px);
+    border-radius: 9999px;
 }
 main::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 9999px;
+}
+div::-webkit-scrollbar {
+    width: 0;
+}
+div::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+div::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -37,4 +54,7 @@ button.active {
 
 button.active svg {
     color: #96f358;
+}
+button.activefeedback {
+    background-color: #96f358;
 }

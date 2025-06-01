@@ -57,3 +57,67 @@ function showSection(targetId) {
         isAnimating = false; // unlock
     }, 500); // match your CSS duration
 }
+const slides = document.querySelectorAll('#slider > div');
+const buttons = document.querySelectorAll('#navButtons > button');
+const slider = document.getElementById('slider');
+
+let currentIndex = 0;
+const totalSlides = slides.length;
+let autoplayTimeout;
+let isPaused = false;
+
+// Scroll to a specific slide
+function scrollToSlide(index) {
+    const slideWidth = slider.clientWidth;
+    slider.scrollTo({
+        left: index * slideWidth,
+        behavior: 'smooth'
+    });
+
+    // Pause autoplay for 10 seconds
+    pauseAutoplay();
+}
+
+// Pause autoplay and resume after 10s
+function pauseAutoplay() {
+    isPaused = true;
+    clearTimeout(autoplayTimeout);
+
+    // Resume autoplay after 10 seconds
+    setTimeout(() => {
+        isPaused = false;
+        scheduleAutoplay();
+    }, 8000);
+}
+
+// Autoplay loop (runs every 5 seconds unless paused)
+function scheduleAutoplay() {
+    if (isPaused) return;
+    autoplayTimeout = setTimeout(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        scrollToSlide(currentIndex);
+        scheduleAutoplay();
+    }, 5000);
+}
+
+// Start autoplay
+scheduleAutoplay();
+
+// Intersection Observer for syncing button highlight
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            currentIndex = index;
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('activefeedback', i === index);
+            });
+        }
+    });
+}, {
+    root: slider,
+    threshold: 0.6
+});
+
+// Observe each slide
+slides.forEach(slide => observer.observe(slide));
