@@ -125,3 +125,14 @@
     window.showSection = showSection;
     window.scrollToSlide = scrollToSlide;
 });
+
+const video = document.getElementById('backgroundVideo');
+const button = document.getElementById('toggleVideo');
+
+button.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+});

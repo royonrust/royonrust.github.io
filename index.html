@@ -29,11 +29,11 @@
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
-<video autoplay muted loop playsinline class="fixed inset-0 w-full h-full object-cover -z-20">
+<video id="backgroundVideo" autoplay muted loop playsinline class="fixed inset-0 w-full h-full object-cover -z-20">
   <source src="videos/websiteBackground.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-<div class="fixed inset-0 bg-[url('/images/0001')] bg-cover bg-center bg-no-repeat bg-fixed z-[-69]"></div>
+<div class="fixed inset-0 bg-[url('/images/0001.png')] bg-cover bg-center bg-no-repeat bg-fixed z-[-69]"></div>
 
 <!-- Full Page Flex Container -->
 <div class="min-h-screen flex justify-center">
@@ -43,7 +43,7 @@
     <!-- Nav Bar -->
     <div class="flex flex-col sticky z-[40] top-[0px] w-full lg:w-fit space-y-4">
       <nav class="sticky top-[0px] z-[40] hidden w-full h-fit p-3 justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:block lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0 tilt-box-left">
-        <button class="relative w-[17vw] h-[17vw] pb-8 flex justify-center items-center bg-surface transition lg:pb-0 lg:w-16 lg:h-16 lg:rounded-full group">
+        <button id="toggleVideo" class="relative w-[17vw] h-[17vw] pb-8 flex justify-center items-center bg-surface transition lg:pb-0 lg:w-16 lg:h-16 lg:rounded-full group">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[7vw] h-[7vw] lg:w-10 lg:h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
             <path d="M15 6.75a.75.75 0 0 0-.75.75V18a.75.75 0 0 0 .75.75h.75a.75.75 0 0 0 .75-.75V7.5a.75.75 0 0 0-.75-.75H15ZM20.25 6.75a.75.75 0 0 0-.75.75V18c0 .414.336.75.75.75H21a.75.75 0 0 0 .75-.75V7.5a.75.75 0 0 0-.75-.75h-.75ZM5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256L5.055 7.061Z" />
