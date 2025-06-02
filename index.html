@@ -18,6 +18,7 @@
                       muted: '#e0e0e0',
                       accent: '#96f358',
                       bordercustom: 'rgba(255,255,255,0.2)',
+                      white: '#ffffff',
                   },
                   fontFamily: {
                       quantico: ['Quantico', 'sans-serif'],
@@ -40,9 +41,10 @@
   <!-- Inner Layout Container (Centered Page Content) -->
   <div class="w-full lg:max-w-[90vw] xl:max-w-[75vw] lg:p-6 flex flex-col lg:flex-row gap-0 items-center">
 
+
     <!-- Nav Bar -->
-    <div class="flex flex-col sticky z-[40] top-[0px] w-full lg:w-fit space-y-4">
-      <nav class="sticky top-[0px] z-[40] hidden w-full h-fit p-3 justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:block lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0 tilt-box-left">
+    <div class="flex flex-col sticky z-[40] top-[0px] w-full lg:w-fit lg:space-y-4 lg:pb-[20vh] tilt-box-left">
+      <nav class="sticky top-[0px] z-[40] hidden w-full h-fit p-3 justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:block lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0">
         <button id="toggleVideo" class="relative w-[17vw] h-[17vw] pb-8 flex justify-center items-center bg-surface transition lg:pb-0 lg:w-16 lg:h-16 lg:rounded-full group">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[7vw] h-[7vw] lg:w-10 lg:h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
@@ -54,7 +56,7 @@
                     PLAY / PAUSE BACKGROUND</span>
         </button>
       </nav>
-      <nav class="sticky top-[0px] z-[40] w-full h-fit p-3 flex flex-row gap-x-[6px] justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0 tilt-box-left">
+      <nav class="sticky top-[0px] z-[40] w-full h-fit p-3 flex flex-row gap-x-[6px] justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0">
       <button data-section="about-section" onclick="showSection('about-section')" class="active relative w-[17vw] h-[17vw] pb-8 flex justify-center items-center lg:bg-surface transition lg:pb-0 lg:w-16 lg:h-16 lg:rounded-full group">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
              class="w-[7vw] h-[7vw] lg:w-10 lg:h-10 text-white transition duration-150 group-hover:scale-110 group-hover:text-accent">
@@ -113,6 +115,7 @@
 
     </nav>
     </div>
+
       <aside class="flex lg:flex-row pb-0 p-6 lg:p-0 flex-col lg:sticky gap-6 w-full lg:w-auto top-6 flex gap-6 items-center tilt-box-left">
 
       <!-- Hero Section -->
@@ -144,6 +147,9 @@
       </div>
 
     </aside>
+
+
+
     <!-- Wrapper with rounded corners and overflow-hidden -->
     <div class="w-full h-[60vh] rounded-[30px] lg:overflow-hidden border border-transparent bg-transparent">
       <!-- Scrollable inner container -->
