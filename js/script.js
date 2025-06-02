@@ -132,7 +132,25 @@ const button = document.getElementById('toggleVideo');
 button.addEventListener('click', () => {
     if (video.paused) {
         video.play();
+        // Gradually restore speed
+        let rate = 0.5;
+        video.playbackRate = rate;
+        const speedUp = setInterval(() => {
+            rate += 0.1;
+            video.playbackRate = rate;
+            if (rate >= 1) clearInterval(speedUp);
+        }, 50);
     } else {
-        video.pause();
+        // Gradually slow down before pausing
+        let rate = 1;
+        const slowDown = setInterval(() => {
+            rate -= 0.1;
+            video.playbackRate = rate;
+            if (rate <= 0.1) {
+                clearInterval(slowDown);
+                video.pause();
+                video.playbackRate = 1; // reset
+            }
+        }, 50);
     }
 });
