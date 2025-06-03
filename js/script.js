@@ -1,5 +1,5 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    const lines = ["Game Developer", "3D Artist", "Programmer", "Game Designer", "Generalist"];
+    const lines = ["Game Developer", "3D Artist", "Programmer", "Game Designer", "Jack of all Trades"];
     let index = 0;
 
     const textEl = document.getElementById("rotating-text");
