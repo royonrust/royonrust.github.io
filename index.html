@@ -18,7 +18,7 @@
                       text: '#FFFFFF',
                       muted: '#e0e0e0',
                       accent: '#96f358',
-                      bordercustom: 'rgba(255,255,255,0.2)',
+                      bordercustom: 'rgba(255,255,255,0.1)',
                       white: '#ffffff',
                   },
                   fontFamily: {
@@ -156,9 +156,8 @@
       <!-- Scrollable inner container -->
       <main class="h-full w-full lg:overflow-y-auto p-6 space-y-6 lg:p-0">
       <div id="sections" class="relative h-auto lg:h-full">
-        <div id="about-section" class="section absolute inset-0 opacity-100 translate-x-0 transition-all duration-500 ease-in-out">
+        <div id="about-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8 rounded-b rounded-[30px] lg:rounded-[0px]">
-
             <h2 class="text-3xl font-semibold text-white mb-4">About Me</h2>
             <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
 
@@ -169,15 +168,15 @@
               </div>
 
               <div class="col-span-12 md:col-span-6">
-                <div class="py-6 border-bordercustom border-t md:border-0 border-b md:border-b flex space-y-0 ml-4">
+                <div class="py-6 border-bordercustom border-t md:border-0 border-b md:border-b flex space-y-0 ml-6">
                   <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Location:</p>
                   <p class="text-xl text-muted mt-2 w-full text-right">Gees, Drenthe, Netherlands</p>
                 </div>
-                <div class="border-b py-6 border-bordercustom flex space-y-0 ml-4">
+                <div class="border-b py-6 border-bordercustom flex space-y-0 ml-6">
                   <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Languages:</p>
                   <p class="text-xl text-muted mt-2 w-full text-right">Dutch, English, German</p>
                 </div>
-                <div class="pb-[4.5em] py-6 flex space-y-0 relative ml-4">
+                <div class="pb-[4.5em] py-6 flex space-y-0 relative ml-6">
                   <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Skills:</p>
                   <div class="absolute flex flex-col space-y-3 right-0">
                     <div class="flex flex-row gap-x-3">
@@ -235,7 +234,7 @@
             <div class="columns-1 md:columns-2 gap-x-8 pt-4 pt-2 mx-auto border-t border-border border-bordercustom">
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Smirates/banner.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -259,7 +258,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Efteling/Efteling%20Logo.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -283,7 +282,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Divine%20Bridge/wireframe.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -307,7 +306,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/website/screenshot.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -339,7 +338,7 @@
 
             <div id="slider" class="w-full overflow-hidden overflow-x-auto flex snap-x snap-mandatory scroll-smooth">
               <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="0">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10" alt="portrait1">
+                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
                   <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
                   <div class="flex flex-row gap-x-1 pt-1">
@@ -354,7 +353,7 @@
                 </div>
               </div>
               <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="1">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10" alt="portrait1">
+                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
                   <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
                   <div class="flex flex-row gap-x-1 pt-1">
@@ -369,7 +368,7 @@
                 </div>
               </div>
               <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="2">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10" alt="portrait1">
+                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
                   <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
                   <div class="flex flex-row gap-x-1 pt-1">
@@ -384,7 +383,7 @@
                 </div>
               </div>
               <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="3">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10" alt="portrait1">
+                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
                   <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
                   <div class="flex flex-row gap-x-1 pt-1">
@@ -459,10 +458,128 @@
           </section>
         </div>
 
-        <div id="resume-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
+        <div id="resume-section" class="section absolute inset-0 opacity-100 translate-x-0 transition-all duration-500 ease-in-out">
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Resume</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
+              <div class="text-xl col-span-12 mt-4 md:col-span-6 border-r pr-6 border-transparent md:border-bordercustom">
+                <div class="flex flex-row gap-x-4 pb-4 border-b border-bordercustom items-center justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-accent h-[2.2em] mt-[-0.2em] w-auto ml-4">
+                    <path d="M11.584 2.376a.75.75 0 0 1 .832 0l9 6a.75.75 0 1 1-.832 1.248L12 3.901 3.416 9.624a.75.75 0 0 1-.832-1.248l9-6Z" />
+                    <path fill-rule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1 0-1.5h.75v-9.918a.75.75 0 0 1 .634-.74A49.109 49.109 0 0 1 12 9c2.59 0 5.134.202 7.616.592a.75.75 0 0 1 .634.74Zm-7.5 2.418a.75.75 0 0 0-1.5 0v6.75a.75.75 0 0 0 1.5 0v-6.75Zm3-.75a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0v-6.75a.75.75 0 0 1 .75-.75ZM9 12.75a.75.75 0 0 0-1.5 0v6.75a.75.75 0 0 0 1.5 0v-6.75Z" clip-rule="evenodd" />
+                    <path d="M12 7.875a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" />
+                  </svg>
+                  <p class="text-2xl">EDUCATION</p>
+                </div>
+
+                <div class="w-full h-fit bg-surface/0 my-4">
+                      <div class="relative border-l-2 border-accent pl-4 ml-4">
+
+                        <div class="mb-10 relative border-accent">
+                          <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                          <div class="bg-surface p-5 rounded-xl border-r-4 border-accent shadow-md">
+                            <p class="text-xl font-semibold">Creative Media & Game Technologies</p>
+                            <div class="flex flex-row items-center">
+                              <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2024 - Present</span>
+                              <p class="pl-2 text-lg text-muted">@ Hanze University of Applied Sciences - Groningen</p>
+                            </div>
+                            <p class="my-2 text-muted">Currently enrolled, specializing in 3D Art, Programming, Narrative Design, and Level Design.</p>
+                            <a href="https://www.hanze.nl/en/programmes/full-time/bachelor/creative-media-and-game-technologies?tab=tab2" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
+                          </div>
+                        </div>
+
+                        <div class="mb-10 relative">
+                          <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                          <div class="bg-surface p-5 rounded-xl shadow-md">
+                            <p class="text-xl font-semibold">Pre-University Education (VWO - Voorbereidend Wetenschappelijk Onderwijs)</p>
+                            <div class="flex flex-row items-center">
+                              <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2017 - 2024</span>
+                              <p class="pl-2 text-lg text-muted">@ Het Hondsrug College - Emmen</p>
+                            </div>
+                            <p class="my-2 text-muted">Completed the highest level of Dutch secondary education, with a focus on IT, Art History, and science-related subjects (STEM).</p>
+                            <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Certificate ></a>
+                          </div>
+                        </div>
+
+                        <div class="mb-10 relative">
+                          <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                          <div class="bg-surface p-5 rounded-xl shadow-md">
+                            <p class="text-xl font-semibold">Primary Education</p>
+                            <div class="flex flex-row items-center">
+                              <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2009 - 2017</span>
+                              <p class="pl-2 text-lg text-muted">@ OBS De Bascule - Nieuw-Amsterdam</p>
+                            </div>
+                            <p class="my-2 text-muted">Completed primary school with additional advanced assignments to further challenge myself.</p>
+                            <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Certificate ></a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+              </div>
+              <div class="text-xl col-span-12 mt-4 md:col-span-6 ml-6">
+                <div class="flex flex-row gap-x-4 pb-4 border-b border-bordercustom items-center justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-accent h-[2em] w-auto ml-4">
+                    <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+                    <path fill-rule="evenodd" d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z" clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-2xl">JOB EXPERIENCE</p>
+                </div>
+
+                <div class="w-full h-fit bg-surface/0 my-4">
+                  <div class="relative border-l-2 border-accent pl-4 ml-4">
+
+                    <div class="mb-10 relative border-accent">
+                      <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                      <div class="bg-surface p-5 rounded-xl border-r-4 border-accent shadow-md">
+                        <p class="text-xl font-semibold">Parcel Delivery Driver</p>
+                        <div class="flex flex-row items-center mb-2">
+                          <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2025 - Present</span>
+                          <p class="pl-2 text-lg text-muted">@ PostNL - Hoogeveen</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
+                      </div>
+                    </div>
+
+                    <div class="mb-10 relative border-accent">
+                      <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                      <div class="bg-surface p-5 rounded-xl border-r-4 border-accent shadow-md">
+                        <p class="text-xl font-semibold">Kitchen Staff</p>
+                        <div class="flex flex-row items-center mb-2">
+                          <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2024 - Present</span>
+                          <p class="pl-2 text-lg text-muted">@ BIG Art & Garden - Gees</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
+                      </div>
+                    </div>
+
+                    <div class="mb-10 relative">
+                      <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                      <div class="bg-surface p-5 rounded-xl shadow-md">
+                        <p class="text-xl font-semibold">Shelf Stacker</p>
+                        <div class="flex flex-row items-center mb-2">
+                          <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2021 - 2024</span>
+                          <p class="pl-2 text-lg text-muted">@ Albert Heijn - Nieuw-Amsterdam</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
+                      </div>
+                    </div>
+
+                    <div class="mb-10 relative">
+                      <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
+                      <div class="bg-surface p-5 rounded-xl shadow-md">
+                        <p class="text-xl font-semibold">Newspaper Delivery</p>
+                        <div class="flex flex-row items-center mb-2">
+                          <span class="text-sm text-accent px-1 py-0.5 border border-accent rounded-[0.5em]">2020 - 2021</span>
+                          <p class="pl-2 text-lg text-muted">@ Frowein - Veenoord</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/roy-onrust-09380a1ab/" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">3D Skills</h2>
@@ -547,5 +664,10 @@
 
 <script src="js/script.js"></script></body>
 </html>
+
+<!--
+ opacity-100 translate-x-0 transition-all duration-500 ease-in-out
+ hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out
+-->
 
 <!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Ruslan Babkin - Flaticon</a>-->
