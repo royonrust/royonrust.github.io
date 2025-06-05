@@ -122,7 +122,7 @@
       <!-- Hero Section -->
       <div class="relative pt-[30em] mt-[1em] lg:mt-0 mb-6 lg:mb-0 w-full lg:w-[30vh] xl:w-[45vh] h-auto lg:h-[73vh] lg:ml-[-1.5em] p-4 flex flex-col justify-end rounded-[30px] overflow-hidden text-[1.3vh]">
 
-        <div class="absolute inset-0 bg-[url('/images/roycropbw.jpg')] bg-cover bg-center rounded-[30px] z-0"></div>
+        <div class="absolute inset-0 bg-[url('/images/roycrop.png')] bg-cover bg-center rounded-[30px] z-0"></div>
 
         <div class="absolute bottom-0 left-0 w-full h-[30%] lg:h-[27%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
               flex flex-col items-center justify-center space-y-2 px-4 text-center"></div>
@@ -156,7 +156,7 @@
       <!-- Scrollable inner container -->
       <main class="h-full w-full lg:overflow-y-auto p-6 space-y-6 lg:p-0">
       <div id="sections" class="relative h-auto lg:h-full">
-        <div id="about-section" class="section absolute inset-0 opacity-100 translate-x-0 transition-all duration-500 ease-in-out">
+        <div id="about-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8 rounded-b rounded-[30px] lg:rounded-[0px]">
             <h2 class="text-3xl font-semibold text-white mb-4">About Me</h2>
             <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
@@ -334,67 +334,75 @@
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Reviews</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom mb-4"></div>
 
             <div id="slider" class="w-full overflow-hidden overflow-x-auto flex snap-x snap-mandatory scroll-smooth">
               <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="0">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
+                <img src="https://www.scorchsoft.com/public/capabilities/chatgpt-ai-api-development/chatgpt-square-logo.webp" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
-                  <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
+                  <p class="max-w-fit">"Roy is clearly a menace — in the best possible way. The kind of developer who doesn’t just make games, but injects them with personality, polish, and an almost
+                    suspicious level of charm. From tight mechanics to quirky presentation, everything screams: this guy actually gives a damn. You don’t build a site like this unless you're proud of the
+                    grind and weirdly in love with your own code (respect). Would trust him with my game. Would also trust him to break it just to rebuild it better."</p>
                   <div class="flex flex-row gap-x-1 pt-1">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
-                    <img src="/icons/star_half.png" alt="star_half" class="w-6 h-6">
+                    <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                   </div>
-                  <p class="pt-4">Humpty Dumpty</p>
-                  <p>Art Director</p>
+                  <p class="pt-4">ChatGPT</p>
+                  <p>AI Large Language Model</p>
                 </div>
               </div>
-              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="1">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
+              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="0">
+                <img src="https://www.scorchsoft.com/public/capabilities/chatgpt-ai-api-development/chatgpt-square-logo.webp" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
-                  <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
+                  <p class="max-w-fit">"Roy is clearly a menace — in the best possible way. The kind of developer who doesn’t just make games, but injects them with personality, polish, and an almost
+                    suspicious level of charm. From tight mechanics to quirky presentation, everything screams: this guy actually gives a damn. You don’t build a site like this unless you're proud of the
+                    grind and weirdly in love with your own code (respect). Would trust him with my game. Would also trust him to break it just to rebuild it better."</p>
                   <div class="flex flex-row gap-x-1 pt-1">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
-                    <img src="/icons/star_half.png" alt="star_half" class="w-6 h-6">
+                    <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                   </div>
-                  <p class="pt-4">Humpty Dumpty</p>
-                  <p>Art Director</p>
+                  <p class="pt-4">ChatGPT</p>
+                  <p>AI Large Language Model</p>
                 </div>
               </div>
-              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="2">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
+              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="0">
+                <img src="https://www.scorchsoft.com/public/capabilities/chatgpt-ai-api-development/chatgpt-square-logo.webp" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
-                  <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
+                  <p class="max-w-fit">"Roy is clearly a menace — in the best possible way. The kind of developer who doesn’t just make games, but injects them with personality, polish, and an almost
+                    suspicious level of charm. From tight mechanics to quirky presentation, everything screams: this guy actually gives a damn. You don’t build a site like this unless you're proud of the
+                    grind and weirdly in love with your own code (respect). Would trust him with my game. Would also trust him to break it just to rebuild it better."</p>
                   <div class="flex flex-row gap-x-1 pt-1">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
-                    <img src="/icons/star_half.png" alt="star_half" class="w-6 h-6">
+                    <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                   </div>
-                  <p class="pt-4">Humpty Dumpty</p>
-                  <p>Art Director</p>
+                  <p class="pt-4">ChatGPT</p>
+                  <p>AI Large Language Model</p>
                 </div>
               </div>
-              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="3">
-                <img src="https://as1.ftcdn.net/jpg/03/38/30/80/1000_F_338308078_iiXC8b9lxpxmjGKaKu4dtXHSIVfzE8qm.jpg" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
+              <div class="min-w-full h-fit flex justify-center items-center snap-center" data-index="0">
+                <img src="https://www.scorchsoft.com/public/capabilities/chatgpt-ai-api-development/chatgpt-square-logo.webp" class="w-[10em] h-[10em] rounded-full m-10 shadow-md" alt="portrait1">
                 <div class="text-muted">
-                  <p class="max-w-[30em]">" This is where a future review is going to come however currently there are no reviews so very big sad "</p>
+                  <p class="max-w-fit">"Roy is clearly a menace — in the best possible way. The kind of developer who doesn’t just make games, but injects them with personality, polish, and an almost
+                    suspicious level of charm. From tight mechanics to quirky presentation, everything screams: this guy actually gives a damn. You don’t build a site like this unless you're proud of the
+                    grind and weirdly in love with your own code (respect). Would trust him with my game. Would also trust him to break it just to rebuild it better."</p>
                   <div class="flex flex-row gap-x-1 pt-1">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
-                    <img src="/icons/star_half.png" alt="star_half" class="w-6 h-6">
+                    <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                   </div>
-                  <p class="pt-4">Humpty Dumpty</p>
-                  <p>Art Director</p>
+                  <p class="pt-4">ChatGPT</p>
+                  <p>AI Large Language Model</p>
                 </div>
               </div>
             </div>
@@ -458,7 +466,7 @@
           </section>
         </div>
 
-        <div id="resume-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
+        <div id="resume-section" class="section absolute inset-0 opacity-100 translate-x-0 transition-all duration-500 ease-in-out">
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Resume</h2>
             <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
@@ -584,6 +592,7 @@
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">3D Skills</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <p></p>
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Programming Skills</h2>
