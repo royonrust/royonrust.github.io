@@ -44,7 +44,7 @@ div::-webkit-scrollbar-thumb {
 }
 @layer utilities {
     .bg-background-blur {
-        background-color: rgba(24, 24, 24, 0.8);
+        background-color: rgba(32, 32, 32, 0.8);
         backdrop-filter: blur(10px);
     }
 }
