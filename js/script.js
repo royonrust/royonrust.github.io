@@ -136,3 +136,4 @@ button.addEventListener('click', () => {
         video.pause();
     }
 });
+

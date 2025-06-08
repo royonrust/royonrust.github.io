@@ -28,6 +28,7 @@
           }
       }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
@@ -40,7 +41,7 @@
 <!-- Full Page Flex Container -->
 <div class="min-h-screen flex justify-center">
   <!-- Inner Layout Container (Centered Page Content) -->
-  <div class="w-full lg:max-w-[95vw] xl:max-w-[85vw] lg:p-6 flex flex-col lg:flex-row gap-0 items-center">
+  <div class="w-full lg:max-w-[95vw] xl:max-w-[90vw] lg:p-6 flex flex-col lg:flex-row gap-0 items-center">
 
 
     <!-- Nav Bar -->
@@ -122,7 +123,7 @@
       <!-- Hero Section -->
       <div class="relative pt-[30em] mt-[1em] lg:mt-0 mb-6 lg:mb-0 w-full lg:w-[30vh] xl:w-[45vh] h-auto lg:h-[73vh] lg:ml-[-1.5em] p-4 flex flex-col justify-end rounded-[30px] overflow-hidden text-[1.3vh]">
 
-        <div class="absolute inset-0 bg-[url('/images/roycrop.png')] bg-cover bg-center rounded-[30px] z-0"></div>
+        <div class="absolute inset-0 bg-[url('/images/roycrop.png')] bg-cover bg-center rounded-[30px] z-0 shadow-md"></div>
 
         <div class="absolute bottom-0 left-0 w-full h-[30%] lg:h-[27%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
               flex flex-col items-center justify-center space-y-2 px-4 text-center"></div>
@@ -146,10 +147,7 @@
           </div>
         </div>
       </div>
-
     </aside>
-
-
 
     <!-- Wrapper with rounded corners and overflow-hidden -->
     <div class="w-full h-[70vh] rounded-[30px] lg:overflow-hidden border border-transparent bg-transparent">
@@ -159,7 +157,7 @@
         <div id="about-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8 rounded-b rounded-[30px] lg:rounded-[0px]">
             <h2 class="text-3xl font-semibold text-white mb-4">About Me</h2>
-            <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
+            <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom pb-4">
 
               <div class="text-xl col-span-12 mt-4 md:col-span-6 border-r pr-6 border-transparent md:border-bordercustom">
                 <p class="text-muted">Hey &#128075;, my name is Roy. I’m a game development student currently enrolled in Creative Media and Game
@@ -180,46 +178,46 @@
                   <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Skills:</p>
                   <div class="absolute flex flex-col space-y-3 right-0">
                     <div class="flex flex-row gap-x-3">
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/blender.png" class="w-[70%] h-[70%] " alt="blender">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">Blender</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/csharp.png" class="w-[70%] h-[70%] " alt="c#">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">C#</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/html.png" class="w-[70%] h-[70%] " alt="html">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">HTML</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/photoshop.png" class="w-[70%] h-[70%] " alt="photoshop">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">Photoshop</span>
                       </span>
                     </div>
                     <div class="flex flex-row gap-x-3">
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/unity.png" class="w-[70%] h-[70%] " alt="unity">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">Unity</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/gamemaker.png" class="w-[70%] h-[70%] " alt="gamemaker">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">GameMaker</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/davinci.png" class="w-[70%] h-[70%] " alt="davinci">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">Davinci Resolve</span>
                       </span>
-                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent/30 flex justify-center items-center">
+                      <span class="relative group w-10 h-10 rounded-[30%] inline-block bg-gradient-to-tl from-transparent to-accent flex justify-center items-center">
                         <img src="/icons/substance painter.png" class="w-[70%] h-[70%] " alt="substance painter">
-                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[30%] bg-surface text-muted opacity-0 transition
+                        <span class="absolute pointer-events-none top-10 z-50 px-2 rounded-[0.5em] bg-surface text-muted opacity-0 transition
                       duration-300 group-hover:opacity-100">Substance Painter</span>
                       </span>
                     </div>
@@ -234,7 +232,7 @@
             <div class="columns-1 md:columns-2 gap-x-8 pt-4 pt-2 mx-auto border-t border-border border-bordercustom">
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Smirates/banner.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -258,7 +256,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Efteling/Efteling%20Logo.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -282,7 +280,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Divine%20Bridge/wireframe.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -306,7 +304,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/website/screenshot.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -479,10 +477,8 @@
                   </svg>
                   <p class="text-2xl">EDUCATION</p>
                 </div>
-
                 <div class="w-full h-fit bg-surface/0 my-4">
                       <div class="relative border-l-2 border-accent pl-4 ml-4">
-
                         <div class="mb-10 relative border-accent">
                           <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
                           <div class="bg-surface p-5 rounded-xl border-r-4 border-accent shadow-md">
@@ -495,7 +491,6 @@
                             <a href="https://www.hanze.nl/en/programmes/full-time/bachelor/creative-media-and-game-technologies?tab=tab2" target="_blank" class="text-xl font-semibold text-white">Learn More ></a>
                           </div>
                         </div>
-
                         <div class="mb-10 relative">
                           <div class="absolute -left-[1.35em] top-1 w-5 h-5 bg-surface border-2 border-accent rounded-full z-10"></div>
                           <div class="bg-surface p-5 rounded-xl shadow-md">
@@ -604,8 +599,234 @@
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">General Skills</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
+              <div class="text-xl col-span-12 mt-4 md:col-span-6 border-r pr-6 border-transparent md:border-bordercustom">
+                <div class="flex flex-row gap-x-4 pb-4 mb-4 border-b border-bordercustom items-center justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-accent h-[2em] w-auto ml-4">
+                    <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
+                    <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
+                  </svg>
+                  <p class="text-2xl">SOFT SKILLS</p>
+                </div>
+
+                <div class="w-full max-h-[50vh] mx-auto bg-surface p-6 rounded-2xl shadow-lg items-center justify-center">
+                  <canvas id="softSkillsChart" width="300" height="300"></canvas>
+                </div>
+
+                <script>
+                    Chart.defaults.font.family = "'Quantico', sans-serif";
+
+                    const footerNotePlugin = {
+                        id: 'footerNotePlugin',
+                        beforeDraw(chart) {
+                            const { ctx, chartArea } = chart;
+                            const text = "*Comparative averages are estimated based on data and insights from industry surveys and reports by GDC, IGDA, Stack Overflow Developer Survey, and Gamasutra articles. These reflect general trends among professional game developers in areas like problem solving, creativity, and time management.";
+
+                            const padding = 20;
+                            const maxWidth = chart.width - padding * 2;
+                            const words = text.split(' ');
+                            const lines = [];
+                            let currentLine = words[0];
+
+                            ctx.save();
+                            ctx.font = "12px Quantico, sans-serif";
+                            ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+                            ctx.textAlign = "left";
+
+                            // Word wrap logic
+                            for (let i = 1; i < words.length; i++) {
+                                const word = words[i];
+                                const width = ctx.measureText(currentLine + " " + word).width;
+                                if (width < maxWidth) {
+                                    currentLine += " " + word;
+                                } else {
+                                    lines.push(currentLine);
+                                    currentLine = word;
+                                }
+                            }
+                            lines.push(currentLine);
+
+                            // Draw lines below the chart area
+                            const startY = chartArea.bottom + 40;
+                            lines.forEach((line, i) => {
+                                ctx.fillText(line, chartArea.left, startY + i * 16);
+                            });
+
+                            ctx.restore();
+                        }
+                    };
+
+                    Chart.register(footerNotePlugin);
+
+                    const ctx = document.getElementById('softSkillsChart').getContext('2d');
+
+                    new Chart(ctx, {
+                        type: 'radar',
+                        data: {
+                            labels: [
+                                'Leadership', 'Problem Solving', 'Creativity', 'Attention to Detail',
+                                'Adaptability', 'Time Management', 'Reliability', 'Confidence'
+                            ],
+                            datasets: [
+                                {
+                                    label: 'Me',
+                                    data: [7, 7, 6, 7, 6, 7, 8, 6],
+                                    backgroundColor: 'rgba(150,243,88,0.2)',
+                                    borderColor: '#96f358',
+                                    pointBackgroundColor: '#96f358',
+                                    borderWidth: 2
+                                },
+                                {
+                                    label: 'Average Game Dev*',
+                                    data: [4, 6, 5, 6, 6, 5, 6, 5],
+                                    backgroundColor: 'rgba(255,255,255,0.1)',
+                                    borderColor: '#ffffff',
+                                    pointBackgroundColor: '#ffffff',
+                                    borderDash: [8, 8],
+                                    borderWidth: 1.5
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            layout: {
+                                padding: {
+                                    bottom: 100
+                                }
+                            },
+                            scales: {
+                                r: {
+                                    suggestedMin: 0,
+                                    suggestedMax: 8,
+                                    ticks: {
+                                        stepSize: 1,
+                                        color: '#AAAAAA',
+                                        backdropColor: 'transparent',
+                                        display: false
+                                    },
+                                    angleLines: {
+                                        color: 'rgba(255,255,255,0.2)'
+                                    },
+                                    grid: {
+                                        color: 'rgba(255,255,255,0.2)'
+                                    },
+                                    pointLabels: {
+                                        color: '#FFFFFF',
+                                        font: {
+                                            size: 14
+                                        },
+                                        padding: 12
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        color: '#FFFFFF',
+                                        font: {
+                                            size: 22
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
+
+              </div>
+
+              <div class="text-xl col-span-12 mt-4 md:col-span-6 ml-6">
+                <div class="flex flex-row gap-x-4 pb-4 mb-4 border-b border-bordercustom items-center justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-accent h-[2em] w-auto ml-4">
+                    <path fill-rule="evenodd" d="M9 2.25a.75.75 0 0 1 .75.75v1.506a49.384 49.384 0 0 1 5.343.371.75.75 0 1 1-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 0 1-2.97 6.323c.318.384.65.753 1 1.107a.75.75 0 0 1-1.07 1.052A18.902 18.902 0 0 1 9 13.687a18.823 18.823 0 0 1-5.656 4.482.75.75 0 0 1-.688-1.333 17.323 17.323 0 0 0 5.396-4.353A18.72 18.72 0 0 1 5.89 8.598a.75.75 0 0 1 1.388-.568A17.21 17.21 0 0 0 9 11.224a17.168 17.168 0 0 0 2.391-5.165 48.04 48.04 0 0 0-8.298.307.75.75 0 0 1-.186-1.489 49.159 49.159 0 0 1 5.343-.371V3A.75.75 0 0 1 9 2.25ZM15.75 9a.75.75 0 0 1 .68.433l5.25 11.25a.75.75 0 1 1-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 0 1-1.36-.634l5.25-11.25A.75.75 0 0 1 15.75 9Zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726Z" clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-2xl">LANGUAGES</p>
+                </div>
+                <div class="grid grid-cols-6 gap-4">
+                  <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit">
+                    <div class="flex flex-row h-full">
+                      <img src="https://kapowaz.github.io/square-flags/flags/nl.svg" alt="NL" class="w-auto h-[4em] rounded-[0.5em]" />
+                      <div class="flex flex-col justify-center items-center pl-4">
+                        <p class="text-2xl text-white w-full font-semibold">Dutch</p>
+                        <p class="text-xl text-accent w-full">Fluent</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit">
+                    <div class="flex flex-row h-full">
+                      <img src="https://kapowaz.github.io/square-flags/flags/gb.svg" alt="NL" class="w-auto h-[4em] rounded-[0.5em]" />
+                      <div class="flex flex-col justify-center items-center pl-4">
+                        <p class="text-2xl text-white w-full font-semibold">English</p>
+                        <p class="text-xl text-accent w-full">Fluent</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit">
+                    <div class="flex flex-row h-full">
+                      <img src="https://kapowaz.github.io/square-flags/flags/de.svg" alt="NL" class="w-auto h-[4em] rounded-[0.5em]" />
+                      <div class="flex flex-col justify-center items-center pl-4">
+                        <p class="text-2xl text-white w-full font-semibold">German</p>
+                        <p class="text-xl text-accent w-full">Experienced</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit">
+                    <div class="flex flex-row h-full">
+                      <img src="https://kapowaz.github.io/square-flags/flags/jp.svg" alt="NL" class="w-auto h-[4em] rounded-[0.5em]" />
+                      <div class="flex flex-col justify-center items-center pl-4">
+                        <p class="text-2xl text-white w-full font-semibold">Japanese</p>
+                        <p class="text-xl text-accent w-full">Beginner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-row gap-x-4 py-4 my-4 border-b border-t border-bordercustom items-center justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-accent h-[2em] w-auto ml-4">
+                    <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                    <path d="m10.076 8.64-2.201-2.2V4.874a.75.75 0 0 0-.364-.643l-3.75-2.25a.75.75 0 0 0-.916.113l-.75.75a.75.75 0 0 0-.113.916l2.25 3.75a.75.75 0 0 0 .643.364h1.564l2.062 2.062 1.575-1.297Z" />
+                    <path fill-rule="evenodd" d="m12.556 17.329 4.183 4.182a3.375 3.375 0 0 0 4.773-4.773l-3.306-3.305a6.803 6.803 0 0 1-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 0 0-.167.063l-3.086 3.748Zm3.414-1.36a.75.75 0 0 1 1.06 0l1.875 1.876a.75.75 0 1 1-1.06 1.06L15.97 17.03a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+
+                  <p class="text-2xl">GAME DEV STRENGTHS</p>
+                </div>
+                <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit flex flex-col mb-4">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 pb-2 border-b border-bordercustom">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-white text-xl">3D Art & Modelling</p>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-white text-xl">Gameplay Programming</p>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-white text-xl">Level Design</p>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-white text-xl">Narrative Design</p>
+                  </div>
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 pt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-white text-xl">UX/UI Design</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </section>
+
         </div>
 
         <div id="school-section" class="section absolute inset-0 hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out">
