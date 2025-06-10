@@ -7,7 +7,7 @@
 main::-webkit-scrollbar {
     width: 0;
 }
-@media (min-width: 1023px) {
+@media (min-width: 1279px) {
     main::-webkit-scrollbar {
         width: 6px;
     }
@@ -33,7 +33,7 @@ div::-webkit-scrollbar-thumb {
 
 .perspective-container-left {
 }
-@media (min-width: 1023px) {
+@media (min-width: 1279px) {
     .tilt-box-left {
         transform: perspective(700px) rotateY(7deg);
         transition: transform 0.3s ease;
