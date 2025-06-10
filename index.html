@@ -43,7 +43,6 @@
   <!-- Inner Layout Container (Centered Page Content) -->
   <div class="w-full lg:max-w-[95vw] xl:max-w-[90vw] lg:p-6 flex flex-col lg:flex-row gap-0 items-center">
 
-
     <!-- Nav Bar -->
     <div class="flex flex-col sticky z-[40] top-[0px] w-full lg:w-fit lg:space-y-4 lg:pb-[15vh] tilt-box-left">
       <nav class="sticky top-[0px] z-[40] hidden w-full h-fit p-3 justify-between items-center bg-background-blur border-b-[3px] border-accent shadow-[0_0_30px_rgba(0,0,0,0.8)] lg:block lg:w-fit lg:space-y-[6px] lg:flex-col lg:bg-background-blur lg:rounded-full lg:shadow-none lg:border-0">
@@ -232,7 +231,7 @@
             <div class="columns-1 md:columns-2 gap-x-8 pt-4 pt-2 mx-auto border-t border-border border-bordercustom">
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 hover:border-accent transition duration-500 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Smirates/banner.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -256,7 +255,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 hover:border-accent transition duration-500 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Efteling/Efteling%20Logo.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -280,7 +279,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 hover:border-accent transition duration-500 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/Divine%20Bridge/wireframe.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -304,7 +303,7 @@
               </div>
 
               <div class="text-xl break-inside-avoid mb-8 border-0 group transition duration-500">
-                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 rounded-[1em] p-3 shadow-md">
+                <div class="flex justify-between flex-col w-full bg-surface border-bordercustom border-2 hover:border-accent transition duration-500 rounded-[1em] p-3 shadow-md">
                   <div class="w-[100%] h-[100%] rounded-[0.5em] mb-4 overflow-hidden relative">
                     <img src="/images/website/screenshot.png" class="w-[100%] h-[100%] rounded-[0.5em] group-hover:scale-[105%] transition duration-500" alt="Smirates">
                     <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -465,6 +464,40 @@
         </div>
 
         <div id="resume-section" class="section absolute inset-0 opacity-100 translate-x-0 transition-all duration-500 ease-in-out">
+          <section class="relative h-fit p-6 bg-background-blur text-text px-8">
+            <h2 class="text-3xl font-semibold text-white mb-4">Tool Stack</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-4 mx-auto border-t border-border border-bordercustom text-[1em]">
+
+              <a href="https://www.jetbrains.com/rider/" class="group relative bg-surface rounded-[2em] shadow-md border-2 border-bordercustom hover:border-accent transition duration-500 p-8 flex flex-col items-center justify-start">
+                <div class="scale-100 group-hover:scale-105 transition duration-500 w-full">
+                  <img src="icons/StackIcons/rider.png" alt="webstorm" class="w-full h-auto mb-4 pb-4 border-b-2 border-accent">
+                  <p class="w-full text-center text-2xl">JetBrains Rider</p>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 rounded-[2em] transition duration-500 pointer-events-none"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="absolute inset-44 w-[30%] text-white opacity-0 group-hover:opacity-100 transition duration-500 drop-shadow-[0_0px_10px_rgba(0,0,0,1)]">
+                  <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+
+              <a href="https://www.jetbrains.com/webstorm/" class="group relative bg-surface rounded-[2em] shadow-md border-2 border-bordercustom hover:border-accent transition duration-500 p-8 flex flex-col items-center justify-start">
+                <div class="scale-100 group-hover:scale-105 transition duration-500 w-full">
+                  <img src="icons/StackIcons/webstorm.png" alt="webstorm" class="w-full h-auto mb-4 pb-4 border-b-2 border-accent">
+                  <p class="w-full text-center text-2xl">JetBrains WebStorm</p>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 rounded-[2em] transition duration-500 pointer-events-none"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="absolute inset-44 w-[30%] text-white opacity-0 group-hover:opacity-100 transition duration-500 drop-shadow-[0_0px_10px_rgba(0,0,0,1)]">
+                  <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+
+            </div>
+
+          </section>
+          <section class="relative h-fit p-6 bg-background-blur text-text px-8">
+            <h2 class="text-3xl font-semibold text-white mb-4">3D Skills</h2>
+            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <p></p>
+          </section>
           <section class="relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Resume</h2>
             <div class="grid grid-cols-12 mx-auto border-t border-border border-bordercustom">
@@ -585,16 +618,7 @@
             </div>
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4">3D Skills</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
-            <p></p>
-          </section>
-          <section class="relative h-fit p-6 bg-background-blur text-text px-8">
             <h2 class="text-3xl font-semibold text-white mb-4">Programming Skills</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
-          </section>
-          <section class="relative h-fit p-6 bg-background-blur text-text px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4">Tool Stack</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
           </section>
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
@@ -748,32 +772,32 @@
 
                   <p class="text-2xl">GAME DEV STRENGTHS</p>
                 </div>
-                <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-full h-fit flex flex-col mb-4">
-                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 pb-2 border-b border-bordercustom">
+                <div class="col-span-6 md:col-span-3 bg-surface rounded-[1em] p-4 w-fit max-w-fit h-fit flex flex-col mb-4">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 mb-4 pb-2 border-b border-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
                     </svg>
                     <p class="text-white text-xl">3D Art & Modelling</p>
                   </div>
-                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 mb-4 py-2 border-b border-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
                     </svg>
                     <p class="text-white text-xl">Gameplay Programming</p>
                   </div>
-                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 mb-4 py-2 border-b border-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
                     </svg>
                     <p class="text-white text-xl">Level Design</p>
                   </div>
-                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 py-2 border-b border-bordercustom">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 mb-4 py-2 border-b border-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
                     </svg>
                     <p class="text-white text-xl">Narrative Design</p>
                   </div>
-                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 pt-2">
+                  <div class="col-span-6 md:col-span-3 bg-surface w-full h-fit flex flex-row gap-x-2 mb-4 py-2 border-b border-accent">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
                     </svg>
