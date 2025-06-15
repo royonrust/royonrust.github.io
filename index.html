@@ -1350,9 +1350,107 @@
           </section>
 
           <section class="relative h-fit p-6 bg-background-blur text-text px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4">Contact Form</h2>
-            <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
+            <h2 class="text-3xl font-semibold text-white mb-4">Contact Me</h2>
+
+            <div class="border-t border-border border-bordercustom pt-6 max-w-3xl mx-auto">
+              <form id="contact-form" action="https://formspree.io/f/movwwnwo" method="POST" class="space-y-6">
+                <!-- Hidden field to detect bots -->
+                <div style="display:none;">
+                  <label>Leave this field empty</label>
+                  <input name="website" type="text">
+                </div>
+
+                <div>
+                  <label for="name" class="block text-muted mb-2">Your Name</label>
+                  <input type="text" id="name" name="name" required
+                          class="w-full bg-surface text-white border border-bordercustom rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-accent transition duration-200"/>
+                  <p class="text-red-500 text-sm mt-1 hidden" id="error-name">Please enter your name.</p>
+                </div>
+                <div>
+                  <label for="email" class="block text-muted mb-2">Your Email</label>
+                  <input type="email" id="email" name="email" required
+                          class="w-full bg-surface text-white border border-bordercustom rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-accent transition duration-200"/>
+                  <p class="text-red-500 text-sm mt-1 hidden" id="error-email">Please enter a valid email address.</p>
+                </div>
+                <div>
+                  <label for="message" class="block text-muted mb-2">Message</label>
+                  <textarea id="message" name="message" rows="6" required
+                          class="w-full bg-surface text-white border border-bordercustom rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-accent transition duration-200 resize-none"></textarea>
+                  <div class="flex flex-row">
+                    <p class="text-sm text-muted mt-1" id="word-count">0 words (min 5, max 300)</p>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="error-message">&nbsp;&nbsp;Your message must be between 5 and 300 words.</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <button type="submit"
+                          class="bg-accent text-black px-6 py-3 rounded-xl font-semibold hover:opacity-80 transition duration-200">
+                    Send Message</button>
+                </div>
+              </form>
+              <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+                  const form = document.getElementById("contact-form");
+                  const message = document.getElementById("message");
+                  const errorMessage = document.getElementById("error-message");
+                  const wordCountDisplay = document.getElementById("word-count");
+
+                  function countWords(text) {
+                      return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+                  }
+
+                  // Update word count dynamically while typing
+                  message.addEventListener("input", () => {
+                      const count = countWords(message.value);
+                      wordCountDisplay.textContent = `${count} word${count !== 1 ? 's' : ''} (min 5, max 300)`;
+
+                      // Show/hide error dynamically
+                      if (count < 5 || count > 300) {
+                          errorMessage.classList.remove("hidden");
+                      } else {
+                          errorMessage.classList.add("hidden");
+                      }
+                  });
+
+                  form.addEventListener("submit", function (e) {
+                      let valid = true;
+
+                      // Clear errors for other fields
+                      ["name", "email", "message"].forEach(field => {
+                          document.getElementById(`error-${field}`).classList.add("hidden");
+                      });
+
+                      // Validate name
+                      const name = document.getElementById("name");
+                      if (!name.value.trim()) {
+                          valid = false;
+                          document.getElementById("error-name").classList.remove("hidden");
+                      }
+
+                      // Validate email
+                      const email = document.getElementById("email");
+                      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                      if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+                          valid = false;
+                          document.getElementById("error-email").classList.remove("hidden");
+                      }
+
+                      // Validate message word count
+                      const wordCount = countWords(message.value);
+                      if (wordCount < 5 || wordCount > 300) {
+                          valid = false;
+                          errorMessage.classList.remove("hidden");
+                      }
+
+                      if (!valid) {
+                          e.preventDefault(); // Stop form submission
+                      }
+                  });
+                  });
+              </script>
+
+            </div>
           </section>
+
         </div>
       </div>
 
@@ -1361,7 +1459,8 @@
   </div>
 </div>
 
-<script src="js/script.js"></script></body>
+<script src="js/script.js"></script>
+</body>
 </html>
 
 <!--
