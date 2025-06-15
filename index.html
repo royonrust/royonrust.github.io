@@ -39,6 +39,12 @@
   <source src="videos/websiteBackgroundv2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+<script>
+    const bgVideo = document.getElementById('backgroundVideo');
+    if (bgVideo) {
+        bgVideo.disablePictureInPicture = true;
+    }
+</script>
 <div class="fixed inset-0 bg-[url('/images/0001.png')] bg-cover bg-center bg-no-repeat bg-fixed z-[-69]"></div>
 
 <!-- Full Page Flex Container -->
