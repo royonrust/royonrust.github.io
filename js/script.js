@@ -56,7 +56,13 @@
             oldSection.classList.add('hidden');
             currentSectionId = targetId;
             isAnimating = false; // unlock
-        }, 500); // match your CSS duration
+
+            // If the new section has a masonry grid, trigger layout
+            const masonryGrid = newSection.querySelector('#masonry-grid');
+            if (masonryGrid && masonryGrid.masonryInstance) {
+                masonryGrid.masonryInstance.layout();
+            }
+        }, 500);
     }
     const slides = document.querySelectorAll('#slider > div');
     const buttons = document.querySelectorAll('#navButtons > button');

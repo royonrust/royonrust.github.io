@@ -58,3 +58,6 @@ button.active svg {
 button.activefeedback {
     background-color: #96f358;
 }
+.your-card-class {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
