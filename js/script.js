@@ -55,12 +55,14 @@
         setTimeout(() => {
             oldSection.classList.add('hidden');
             currentSectionId = targetId;
-            isAnimating = false; // unlock
+            isAnimating = false;
 
-            // If the new section has a masonry grid, trigger layout
             const masonryGrid = newSection.querySelector('#masonry-grid');
             if (masonryGrid && masonryGrid.masonryInstance) {
-                masonryGrid.masonryInstance.layout();
+                // Small extra delay before layout
+                setTimeout(() => {
+                    masonryGrid.masonryInstance.layout();
+                }, 50); // 50–100ms usually works well
             }
         }, 500);
     }
