@@ -1,4 +1,55 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
+    // Open popup
+    document.querySelectorAll('[data-popup]').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-popup');
+            const popupContainer = document.getElementById('popup-container');
+            const targetPopup = document.getElementById(targetId);
+
+            // Show backdrop
+            popupContainer.classList.remove('hidden');
+            setTimeout(() => {
+                popupContainer.classList.add('bg-opacity-50');
+            }, 10);
+
+            // Show popup content with animation
+            targetPopup.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                targetPopup.classList.remove('opacity-0', 'scale-95');
+                targetPopup.classList.add('opacity-100', 'scale-100');
+            });
+
+            document.body.classList.add('overflow-hidden');
+        });
+    });
+
+// Close popup
+    document.querySelectorAll('[data-close]').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            const popupContainer = document.getElementById('popup-container');
+
+            // Fade out backdrop
+            popupContainer.classList.remove('bg-opacity-50');
+
+            // Animate and hide popup(s)
+            popupContainer.querySelectorAll('[id^="popup-"]').forEach(popup => {
+                popup.classList.add('opacity-0', 'scale-95');
+                popup.classList.remove('opacity-100', 'scale-100');
+
+                // Hide completely after transition
+                setTimeout(() => {
+                    popup.classList.add('hidden');
+                }, 300);
+            });
+
+            // Hide the container after the animation
+            setTimeout(() => {
+                popupContainer.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        });
+    });
+
     const lines = ["Game Developer", "3D Artist", "Programmer", "Game Designer", "Jack of all Trades"];
     let index = 0;
 

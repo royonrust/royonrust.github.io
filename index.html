@@ -27,6 +27,20 @@
                   screens: {
                       '3xl': '1860px',
                   },
+                  keyframes: {
+                      'fade-in': {
+                          '0%': { opacity: 0 },
+                          '100%': { opacity: 1 },
+                      },
+                      'zoom-fade': {
+                          '0%': { opacity: 0, transform: 'scale(0.95)' },
+                          '100%': { opacity: 1, transform: 'scale(1)' },
+                      },
+                  },
+                  animation: {
+                      'fade-in': 'fade-in 0.3s ease-out',
+                      'zoom-fade': 'zoom-fade 0.3s ease-out',
+                  },
               }
           }
       }
@@ -48,7 +62,7 @@
 <div class="fixed inset-0 bg-[url('/images/0001.png')] bg-cover bg-center bg-no-repeat bg-fixed z-[-69]"></div>
 
 <!-- Full Page Flex Container -->
-<div class="min-h-screen flex justify-center">
+<div class="min-h-screen flex justify-center relative">
   <!-- Inner Layout Container (Centered Page Content) -->
   <div class="w-full xl:max-w-[95vw] xl:max-w-[90vw] xl:p-6 flex flex-col xl:flex-row gap-0 items-center">
 
@@ -175,20 +189,20 @@
                 </div>
               </div>
 
-              <div class="col-span-12 md:col-span-6">
-                <div class="py-6 border-bordercustom border-t md:border-0 border-b md:border-b flex space-y-0 ml-6">
+              <div class="col-span-12 md:col-span-6 mt-4">
+                <div class="flex space-y-0 ml-6">
                   <div class="w-full flex space-y-0 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
                     <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Location:</p>
                     <p class="text-xl text-muted mt-2 w-full text-right">Gees, Drenthe, Netherlands</p>
                   </div>
                 </div>
-                <div class="border-b py-6 border-bordercustom flex space-y-0 ml-6">
+                <div class="flex space-y-0 ml-6 mt-4">
                   <div class="w-full flex space-y-0 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
                     <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Languages:</p>
                     <p class="text-xl text-muted mt-2 w-full text-right">Dutch, English, German</p>
                   </div>
                 </div>
-                <div class="py-6 flex space-y-0 relative ml-6">
+                <div class="flex space-y-0 ml-6 mt-4 relative">
                   <div class="w-full h-[9.5em] flex space-y-0 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
                     <p class="text-xl font-medium text-background rounded-[.4em] bg-accent px-2 mr-2 h-fit text-left min-w-fit">Skills:</p>
                     <div class="absolute flex flex-col space-y-3 right-0 pr-4">
@@ -247,7 +261,7 @@
             <h2 class="text-3xl font-semibold text-white mb-4">Achievements</h2>
             <div class="columns-1 md:columns-2 gap-x-6 pt-4 pt-2 mx-auto border-t border-border border-bordercustom">
 
-              <div class="break-inside-avoid p-6 mb-6 flex flex-col items-center justify-center group bg-surface border-2 border-bordercustom hover:border-accent transition duration-500 rounded-[1.5em]">
+              <div class="break-inside-avoid p-6 mb-6 flex flex-col items-center justify-center group bg-surface border-2 border-bordercustom hover:border-accent transition duration-500 rounded-[1.5em] cursor-pointer" data-popup="popup-smirates">
                 <div class="mb-4 flex overflow-hidden h-full w-full rounded-[1em] border-2 border-bordercustom shadow-xl relative">
                   <img src="/images/Smirates/banner.png" alt="Efteling GO" class="h-full w-full object-cover group-hover:scale-105 transition duration-500">
                   <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -355,7 +369,7 @@
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                     <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
-                    <img src="/icons/star_half.png" alt="star_half" class="w-6 h-6">
+                    <img src="/icons/star_full.png" alt="star_full" class="w-6 h-6">
                   </div>
                   <p class="pt-4">Luna Kuzina</p>
                   <p>2D Artist, UX/UI Designer</p>
@@ -1181,7 +1195,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">ELDEN RING is one of my favourite games of all time, and the great looming structures in the game have always fascinated and inspired
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1206,7 +1220,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">I never created a city before and I have always loved the night time city skylines. I wanted to recreate one as best as I could and
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1231,7 +1245,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">Gscatter is an addon for Blender with which you can quickly create intricate flora to liven up your scenes. As an environment artist
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1256,7 +1270,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">As a modeling and animating practice, I decided to model the very laptop I work on as it was one of the easiest accessible references I had
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1281,7 +1295,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">My dad has always had this radio in the house, and I have always thought it to look nostalgic. As good practice I decided
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1306,7 +1320,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-xl text-muted pt-4">For this amazing project I did some wonderful things to achieve magnificent results
+                <p class="text-xl text-muted pt-4">I wanted to experiment with more complex animations in Blender, for this I chose a Rubik's Cube because of the individually movable faces
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1316,12 +1330,11 @@
           <script>
               document.addEventListener('DOMContentLoaded', () => {
               const grid = document.querySelector('#masonry-grid');
-              const msnry = new Masonry(grid, {
+                  grid.masonryInstance = new Masonry(grid, {
                   itemSelector: '.your-card-class',
                   gutter: 24,
                   percentPosition: true,
               });
-              grid.masonryInstance = msnry;
               });
 
           </script>
@@ -1403,7 +1416,7 @@
           </section>
 
         </div>
-        <div id="thank-you-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" style="z-index: 9999;">
+        <div id="thank-you-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" style="z-index: 8000;">
           <div class="bg-surface text-white rounded-[1em] p-6 max-w-sm w-full text-center shadow-xl border-2 border-bordercustom">
             <p class="mb-4 text-lg font-semibold">Thank you for your message! I'll get back to you soon.</p>
             <button id="close-popup" class="text-black bg-accent px-4 py-2 rounded-[0.5em] hover:opacity-80 transition duration-200">Close</button>
@@ -1502,15 +1515,32 @@
     </main>
     </div>
   </div>
+
 </div>
 
-<script src="js/script.js"></script>
-</body>
-</html>
+<div id="popup-container" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
+  <div class="w-full lg:w-[90vw] xl:w-[85vw] h-[85vh] rounded-[30px] xl:overflow-hidden border border-transparent bg-transparent">
+    <main class="h-full w-full xl:overflow-y-auto p-6 space-y-6 xl:p-0">
 
+      <div id="popup-smirates" class="hidden text-text rounded-lg w-full h-full relative opacity-0 scale-95 transition-all duration-300 transform">
+        <button class="absolute top-2 right-2 z-50 text-muted" data-close>&times;</button>
+        <section class="relative h-full p-6 bg-background-blur text-text pt-8 px-8">
+          <h2 class="text-3xl font-semibold text-white mb-4">Smirates of the Smaribean Smea</h2>
+          <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
+
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+
+
+<script src="js/script.js"></script></body></html>
 <!--
  opacity-100 translate-x-0 transition-all duration-500 ease-in-out
  hidden opacity-0 -translate-x-5 pointer-events-none transition-all duration-500 ease-in-out
--->
-
-<!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Ruslan Babkin - Flaticon</a>-->
+--><!--<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Ruslan Babkin - Flaticon</a>-->
