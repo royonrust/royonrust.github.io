@@ -143,9 +143,64 @@
       <aside class="flex xl:flex-row pb-0 p-6 xl:p-0 flex-col xl:sticky gap-6 w-full xl:max-w-[30vw] xl:w-auto top-6 flex gap-6 items-center tilt-box-left">
 
       <!-- Hero Section -->
-      <div class="relative pt-[30em] mt-[1em] xl:mt-0 mb-6 xl:mb-0 w-full xl:w-[30vh] xl:w-[45vh] h-auto xl:h-[73vh] xl:ml-[-1.5em] p-4 flex flex-col justify-end rounded-[30px] overflow-hidden text-[1.3vh]">
+      <div class="relative bg-surface pt-[30em] mt-[1em] xl:mt-0 mb-6 xl:mb-0 w-full xl:w-[30vh] xl:w-[45vh] h-auto xl:h-[73vh] xl:ml-[-1.5em] p-4 flex flex-col justify-end rounded-[30px] overflow-hidden text-[1.3vh]">
 
-        <div class="absolute inset-0 bg-[url('/images/roycrop.png')] bg-cover bg-center rounded-[30px] z-0 shadow-xl"></div>
+        <div class="chromatic-wrapper absolute inset-0 rounded-[30px] z-0 shadow-xl overflow-hidden">
+          <img src="/images/roycrop.png" alt="Normal" class="w-full scale-[102%] h-full object-cover" />
+          <img src="/images/roycrop.png" alt="Glitch" class="w-full scale-[102%] h-full object-cover absolute top-0 left-0" style="filter: url(#chromatic-aberration); opacity: 0; transition: opacity 1s ease-in-out;" id="glitch-image" />
+        </div>
+
+        <svg width="0" height="0" style="position:absolute;">
+          <filter id="chromatic-aberration" x="0" y="0" width="100%" height="100%" overflow="visible">
+          <!-- Red channel -->
+            <feOffset in="SourceGraphic" dx="-5" dy="0" result="red" />
+            <feColorMatrix in="red" type="matrix"
+                           values="1 0 0 0 0
+                           0 0 0 0 0
+                           0 0 0 0 0
+                           0 0 0 1 0" result="redOnly"/>
+            <!-- Green channel -->
+            <feOffset in="SourceGraphic" dx="5" dy="0" result="green" />
+            <feColorMatrix in="green" type="matrix"
+                           values="0 0 0 0 0
+                           0 1 0 0 0
+                           0 0 0 0 0
+                           0 0 0 1 0" result="greenOnly"/>
+            <!-- Blue channel -->
+            <feOffset in="SourceGraphic" dx="-5" dy="0" result="blue" />
+            <feColorMatrix in="blue" type="matrix"
+                           values="0 0 0 0 0
+                           0 0 0 0 0
+                           0 0 1 0 0
+                           0 0 0 1 0" result="blueOnly"/>
+            <!-- Combine all -->
+            <feBlend in="redOnly" in2="greenOnly" mode="screen" result="rg"/>
+            <feBlend in="rg" in2="blueOnly" mode="screen" />
+          </filter>
+        </svg>
+
+        <script>
+            const glitchImg = document.getElementById('glitch-image');
+            glitchImg.style.opacity = '0';
+
+            function glitchCycle() {
+                glitchImg.style.transition = 'opacity 2s ease-in-out';
+                glitchImg.style.opacity = '1';
+
+                setTimeout(() => {
+                    glitchImg.style.opacity = '0';
+                }, 3000);
+
+                setTimeout(() => {
+                    glitchCycle();
+                }, 5000 + 2000 + Math.random() * 6000);
+            }
+            glitchImg.style.opacity = '0';
+
+            setTimeout(() => {
+                glitchCycle();
+            }, 5000);
+        </script>
 
         <div class="absolute bottom-0 left-0 w-full h-[33%] xl:h-[27%] rounded-b-[30px] bg-black bg-opacity-0 backdrop-blur-[10px]
               flex flex-col items-center justify-center space-y-2 px-4 text-center"></div>
@@ -1524,13 +1579,13 @@
     <main class="h-full w-full xl:overflow-y-auto p-6 space-y-6 xl:p-0">
 
       <div id="popup-smirates" class="hidden text-text rounded-lg w-full h-full relative opacity-0 scale-95 transition-all duration-300 transform">
-        <button class="absolute group top-2 right-2 z-50 text-muted border-2 border-bordercustom rounded-[1em] w-fit h-fit flex items-center justify-center bg-surface hover:border-bordercustom transition duration-200" data-close>
+        <button class="absolute group top-2 right-8 z-50 text-muted border-2 border-bordercustom rounded-[1em] w-fit h-fit flex items-center justify-center bg-surface hover:border-bordercustom transition duration-200" data-close>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 p-4 w-[4em] h-auto group-hover:text-accent transition duration-500">
             <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
           </svg>
-
         </button>
-        <section class="relative h-full p-6 bg-background-blur text-text pt-8 px-8">
+
+        <section class="rounded-[30px] relative h-full p-6 bg-background-blur text-text pt-8 px-8">
           <h2 class="text-3xl font-semibold text-white mb-4">Smirates of the Smaribean Smea</h2>
           <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
