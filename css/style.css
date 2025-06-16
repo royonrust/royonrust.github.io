@@ -1,11 +1,11 @@
 ﻿html {
     font-size: 75%;
 }
-@media (pointer: coarse) {
+/*@media (pointer: coarse) {
     html {
-        font-size: 125%; /* scale up the font by 25% on mobile devices */
+        font-size: 125%; /* scale up the font by 25% on mobile devices
     }
-}
+}*/
 @font-face {
     font-family: 'Quantico';
     src: url('/fonts/Quantico-Regular.ttf') format('truetype');
