@@ -49,7 +49,7 @@
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
-<video autoplay muted loop playsinline aria-hidden="true" tabindex="-1" class="disablePictureInPicture fixed inset-0 w-full h-full object-cover -z-20">
+<video id="backgroundVideo" autoplay muted loop playsinline aria-hidden="true" tabindex="-1" class="disablePictureInPicture fixed inset-0 w-full h-full object-cover -z-20">
   <source src="videos/websiteBackgroundv2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -1640,32 +1640,33 @@
                 </div>
                 <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                   <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                  <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
+                  <p class="text-muted text-center pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
                 </div>
 
 
 
                 <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                   <img src="images/Smirates/code.png" alt="hello" class="w-full rounded-[1em]">
+                  <p class="text-muted text-center pt-2">Snippet of player script (<strong>2</strong>)</p>
                 </div>
                 <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                  <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist. However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
+                  <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist (<strong>2</strong>). However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
                 </div>
 
                 <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                   <img src="images/Smirates/UI.png" alt="hello" class="w-full rounded-[1em]">
-                  <p class="text-muted pt-2">User Interface elements (<strong>2</strong>)</p>
+                  <p class="text-muted text-center pt-2">User Interface elements (<strong>3</strong>)</p>
                   <img src="images/Smirates/pause.png" alt="hello" class="w-full rounded-[1em] mt-4">
-                  <p class="text-muted pt-2">Pause Interface (<strong>3</strong>)</p>
+                  <p class="text-muted text-center pt-2">Pause Interface (<strong>4</strong>)</p>
                 </div>
                 <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                  <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>2</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>3</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>4</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
+                  <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>3</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>4</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>5</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
                 </div>
                 <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                   <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
-                  <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
+                  <p class="text-muted text-center pt-2">Video editing in Davinci Resolve (<strong>5</strong>)</p>
                   <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
-                  <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
+                  <p class="text-muted text-center pt-2">Waterfall backdrop, straight from in-game (<strong>6</strong>)</p>
                 </div>
 
               </div>
@@ -1684,40 +1685,69 @@
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">The first time we were required to create a digital game for our studies, we used the software GameMaker. Despite having little prior experience with game programming, I was assigned the role of lead programmer—an exciting challenge that came with a steep learning curve.
-                  <br><br>
-                  <em>Smirates of the Smaribean Smea</em> is a game about a pirate crew stranded on a remote island after their ship crashes. You play as the captain, only to find your crew has vanished from the beach. Venture into the wild forest, explore hidden caves and ancient fortresses, and track down your missing crew. However, once found, they seem distant—no longer eager to follow your lead. It’s up to you to reunite your crew and find a way off the island.
-                  <br><br>
-                  Beyond being a fun little adventure game, <em>Smirates</em> also aims to teach players the value of teamwork and understanding different personalities. We were tasked with designing the game as a useful tool for first-year students. By embedding these lessons into gameplay, we hope to give newcomers a smoother and more engaging start to their academic journey.</p>
+                <p class="text-muted">Talk about game</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
+                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
               </div>
 
 
 
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/code.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Snippet of the camera script (<strong>2</strong>)</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Code</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Intro to 3D & Rapunzel tower</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/rapunzelblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/rapunzelunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Rapunzel's tower (<strong>3</strong>)</p>
+              </div>
+
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/code.png" alt="hello" class="w-full rounded-[1em]">
+                <video src="/images/Efteling/book.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">3D animation of the book (<strong>4</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist. However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
+                <p class="text-muted">Explanation about book</p>
               </div>
 
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/UI.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">User Interface elements (<strong>2</strong>)</p>
-                <img src="images/Smirates/pause.png" alt="hello" class="w-full rounded-[1em] mt-4">
-                <p class="text-muted pt-2">Pause Interface (<strong>3</strong>)</p>
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models (<strong>5</strong>)</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>2</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>3</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>4</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
+              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about trees</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
-                <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
-                <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
+              <div class="text-xl col-span-12 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeunity.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models in-game (<strong>6</strong>)</p>
+              </div>
+
+              <div class="text-xl col-span-4 lg:col-span-2 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Audio recordings (<strong>7</strong>)</p>
+              </div>
+              <div class="text-xl col-span-8 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/houseblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/houseunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Little Red Riding Hood's house (<strong>8</strong>)</p>
               </div>
 
             </div>
@@ -1732,44 +1762,73 @@
           </button>
 
           <section class="rounded-[30px] relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Roy Onrust Portfolio Website</h2>
+            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Efteling GO</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">The first time we were required to create a digital game for our studies, we used the software GameMaker. Despite having little prior experience with game programming, I was assigned the role of lead programmer—an exciting challenge that came with a steep learning curve.
-                  <br><br>
-                  <em>Smirates of the Smaribean Smea</em> is a game about a pirate crew stranded on a remote island after their ship crashes. You play as the captain, only to find your crew has vanished from the beach. Venture into the wild forest, explore hidden caves and ancient fortresses, and track down your missing crew. However, once found, they seem distant—no longer eager to follow your lead. It’s up to you to reunite your crew and find a way off the island.
-                  <br><br>
-                  Beyond being a fun little adventure game, <em>Smirates</em> also aims to teach players the value of teamwork and understanding different personalities. We were tasked with designing the game as a useful tool for first-year students. By embedding these lessons into gameplay, we hope to give newcomers a smoother and more engaging start to their academic journey.</p>
+                <p class="text-muted">Talk about game</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
+                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
               </div>
 
 
 
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/code.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Snippet of the camera script (<strong>2</strong>)</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Code</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Intro to 3D & Rapunzel tower</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/rapunzelblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/rapunzelunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Rapunzel's tower (<strong>3</strong>)</p>
+              </div>
+
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/code.png" alt="hello" class="w-full rounded-[1em]">
+                <video src="/images/Efteling/book.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">3D animation of the book (<strong>4</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist. However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
+                <p class="text-muted">Explanation about book</p>
               </div>
 
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/UI.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">User Interface elements (<strong>2</strong>)</p>
-                <img src="images/Smirates/pause.png" alt="hello" class="w-full rounded-[1em] mt-4">
-                <p class="text-muted pt-2">Pause Interface (<strong>3</strong>)</p>
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models (<strong>5</strong>)</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>2</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>3</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>4</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
+              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about trees</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
-                <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
-                <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
+              <div class="text-xl col-span-12 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeunity.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models in-game (<strong>6</strong>)</p>
+              </div>
+
+              <div class="text-xl col-span-4 lg:col-span-2 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Audio recordings (<strong>7</strong>)</p>
+              </div>
+              <div class="text-xl col-span-8 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/houseblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/houseunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Little Red Riding Hood's house (<strong>8</strong>)</p>
               </div>
 
             </div>
@@ -1784,44 +1843,73 @@
           </button>
 
           <section class="rounded-[30px] relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Icebound</h2>
+            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Efteling GO</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">The first time we were required to create a digital game for our studies, we used the software GameMaker. Despite having little prior experience with game programming, I was assigned the role of lead programmer—an exciting challenge that came with a steep learning curve.
-                  <br><br>
-                  <em>Smirates of the Smaribean Smea</em> is a game about a pirate crew stranded on a remote island after their ship crashes. You play as the captain, only to find your crew has vanished from the beach. Venture into the wild forest, explore hidden caves and ancient fortresses, and track down your missing crew. However, once found, they seem distant—no longer eager to follow your lead. It’s up to you to reunite your crew and find a way off the island.
-                  <br><br>
-                  Beyond being a fun little adventure game, <em>Smirates</em> also aims to teach players the value of teamwork and understanding different personalities. We were tasked with designing the game as a useful tool for first-year students. By embedding these lessons into gameplay, we hope to give newcomers a smoother and more engaging start to their academic journey.</p>
+                <p class="text-muted">Talk about game</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
+                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
               </div>
 
 
 
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/code.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Snippet of the camera script (<strong>2</strong>)</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Code</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Intro to 3D & Rapunzel tower</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/rapunzelblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/rapunzelunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Rapunzel's tower (<strong>3</strong>)</p>
+              </div>
+
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/code.png" alt="hello" class="w-full rounded-[1em]">
+                <video src="/images/Efteling/book.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">3D animation of the book (<strong>4</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist. However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
+                <p class="text-muted">Explanation about book</p>
               </div>
 
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/UI.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">User Interface elements (<strong>2</strong>)</p>
-                <img src="images/Smirates/pause.png" alt="hello" class="w-full rounded-[1em] mt-4">
-                <p class="text-muted pt-2">Pause Interface (<strong>3</strong>)</p>
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models (<strong>5</strong>)</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>2</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>3</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>4</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
+              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about trees</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
-                <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
-                <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
+              <div class="text-xl col-span-12 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeunity.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models in-game (<strong>6</strong>)</p>
+              </div>
+
+              <div class="text-xl col-span-4 lg:col-span-2 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Audio recordings (<strong>7</strong>)</p>
+              </div>
+              <div class="text-xl col-span-8 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/houseblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/houseunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Little Red Riding Hood's house (<strong>8</strong>)</p>
               </div>
 
             </div>
@@ -1836,49 +1924,79 @@
           </button>
 
           <section class="rounded-[30px] relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Egg, Inc. UX/UI Redesign</h2>
+            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Efteling GO</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">The first time we were required to create a digital game for our studies, we used the software GameMaker. Despite having little prior experience with game programming, I was assigned the role of lead programmer—an exciting challenge that came with a steep learning curve.
-                  <br><br>
-                  <em>Smirates of the Smaribean Smea</em> is a game about a pirate crew stranded on a remote island after their ship crashes. You play as the captain, only to find your crew has vanished from the beach. Venture into the wild forest, explore hidden caves and ancient fortresses, and track down your missing crew. However, once found, they seem distant—no longer eager to follow your lead. It’s up to you to reunite your crew and find a way off the island.
-                  <br><br>
-                  Beyond being a fun little adventure game, <em>Smirates</em> also aims to teach players the value of teamwork and understanding different personalities. We were tasked with designing the game as a useful tool for first-year students. By embedding these lessons into gameplay, we hope to give newcomers a smoother and more engaging start to their academic journey.</p>
+                <p class="text-muted">Talk about game</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea (<strong>1</strong>)</p>
+                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
               </div>
 
 
 
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/code.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Snippet of the camera script (<strong>2</strong>)</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Code</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Intro to 3D & Rapunzel tower</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/rapunzelblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/rapunzelunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Rapunzel's tower (<strong>3</strong>)</p>
+              </div>
+
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/code.png" alt="hello" class="w-full rounded-[1em]">
+                <video src="/images/Efteling/book.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+                <p class="text-muted text-center pt-2">3D animation of the book (<strong>4</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Having practically zero coding experience before starting this project, I thought it was surprisingly easy to pick up. Granted, GML is not the most complex programming language to exist. However, I think I did an amazing job with the little time that we had to develop this game. <br><br>In the 2 months of development I coded more than 5500+ lines of GML code, skyrocketing my programming skills from a newbie to pretty experienced already.<br><br>This burst of experience helped me tremendously in projects developed after this.</p>
+                <p class="text-muted">Explanation about book</p>
               </div>
 
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/UI.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">User Interface elements (<strong>2</strong>)</p>
-                <img src="images/Smirates/pause.png" alt="hello" class="w-full rounded-[1em] mt-4">
-                <p class="text-muted pt-2">Pause Interface (<strong>3</strong>)</p>
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models (<strong>5</strong>)</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">One of the challenges I encountered while working on the game was designing the User Interface. I took this as an opportunity to develop two new skills simultaneously: 2D art and UI design. <br><br>I created the User Interface sprites (<strong>2</strong>) using Aseprite, a pixel art tool. With these newly made assets, I was able to assemble the actual interface, as shown in the pause screen (<strong>3</strong>), effectively strengthening both my 2D art and UI design abilities.<br><br>Another challenge was the marketing of our game. I decided to tackle this by making a trailer for our game (<strong>1</strong>) using Davinci Resolve (<strong>4</strong>). I used some music I made together with AI tools as the background track and went over some of the actions you can take in the game in a slightly comical manner. This was extremely helpful in getting eyes on our product and made the perfect finish to our development process.</p>
+              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about trees</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
-                <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
-                <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
+              <div class="text-xl col-span-12 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeunity.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">All the tree models in-game (<strong>6</strong>)</p>
+              </div>
+
+              <div class="text-xl col-span-4 lg:col-span-2 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Audio recordings (<strong>7</strong>)</p>
+              </div>
+              <div class="text-xl col-span-8 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Explanation about audio</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <div class="flex flex-row gap-x-4 items-center justify-center">
+                  <img src="images/Efteling/houseblender.png" alt="hello" class="w-[48%] rounded-[1em]">
+                  <img src="images/Efteling/houseunity.png" alt="hello" class="w-[48%] rounded-[1em]">
+                </div>
+                <p class="text-muted text-center pt-2">3D model of Little Red Riding Hood's house (<strong>8</strong>)</p>
               </div>
 
             </div>
           </section>
         </div>
+
       </div>
     </div>
   </div>
