@@ -1116,7 +1116,7 @@
             </div>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom"></div>
 
-            <div class="p-8 mb-12 my-4 flex flex-col items-center justify-center group bg-surface border-2 border-bordercustom hover:border-accent transition duration-500 rounded-[2em] shadow-xl">
+            <div class="p-8 mb-12 my-4 flex flex-col items-center justify-center group bg-surface border-2 border-bordercustom hover:border-accent transition duration-500 rounded-[2em] shadow-xl cursor-pointer" data-popup="popup-smirates">
               <div class="mb-4 flex overflow-hidden h-full w-full aspect-[4/1] rounded-[1.5em] border-2 border-bordercustom shadow-xl relative">
                 <img src="images/Smirates/banner.png" alt="Efteling GO" class="h-full w-full object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -1226,6 +1226,31 @@
                   </div>
                 </div>
                 <p class="text-xl text-muted pt-4">My very first actual Blender project. I have always thought Churches to be magnificent and snow makes anything better, so I thought: why not combine it?
+                  <span class="opacity-80">...</span>
+                  <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
+              </div>
+
+              <div class="your-card-class w-full md:w-[calc(50%-0.75rem)] break-inside-avoid mb-6 p-6 flex flex-col items-center justify-center group bg-surface border-2 border-bordercustom hover:border-accent transition duration-500 rounded-[1.5em] shadow-xl">
+                <div class="mb-4 flex overflow-hidden h-full w-full rounded-[1em] border-2 border-bordercustom shadow-xl relative">
+                  <img src="/images/website/screenshot.png" alt="Efteling GO" class="h-full w-full object-cover group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute inset-0 m-auto z-[20] w-20 h-20 size-6 opacity-0 group-hover:opacity-100 transition duration-500 drop-shadow-[0_20px_10px_rgba(0,0,0,1)]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+                </div>
+                <div class="w-full flex flex-row justify-between items-center bg-surface relative">
+                  <div class="flex flex-col">
+                    <p class="text-xl text-muted w-full">HTML, Tailwind.CSS, JS</p>
+                    <p class="text-2xl text-white w-full group-hover:text-accent transition duration-500">Personal Portfolio Website</p>
+                  </div>
+                  <div class="border-2 border-bordercustom rounded-[1em] w-fit h-fit ml-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 p-4 w-[4em] h-auto group-hover:text-accent transition duration-500">
+                      <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-xl text-muted pt-4">I was in need of a website on which I could showcase my projects and skills. Because I am extra I decided to brush off my HTML, CSS, and JS skills and make a website from scratch
                   <span class="opacity-80">...</span>
                   <span class="opacity-50 group-hover:opacity-100 group-hover:text-accent transition duration-500">read more</span></p>
               </div>
@@ -1573,13 +1598,14 @@
 
 </div>
 
-<div id="popup-container" class="fixed inset-0 bg-black bg-opacity-0 z-50 flex items-center justify-center hidden transition-opacity ease-out duration-300">
+<div id="popup-container" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center  transition-opacity ease-out duration-300">
 
   <div class="w-full lg:w-[90vw] xl:w-[85vw] h-[85vh] rounded-[30px] xl:overflow-hidden border border-transparent bg-transparent">
     <main class="h-full w-full xl:overflow-y-auto p-6 space-y-6 xl:p-0">
 
-      <div id="popup-smirates" class="hidden text-text rounded-lg w-full h-full relative opacity-0 scale-95 transition-all duration-300 transform">
-        <button class="absolute group top-2 right-8 z-50 text-muted border-2 border-bordercustom rounded-[1em] w-fit h-fit flex items-center justify-center bg-surface hover:border-bordercustom transition duration-200" data-close>
+      <div id="popup-smirates" class=" text-text rounded-lg w-full h-full relative opacity-100 scale-95 transition-all duration-300 transform relative">
+        <div class="absolute inset-0 bg-white/20 rounded-[30px]"></div>
+        <button class="absolute group top-2 right-8 z-50 text-muted border-2 border-bordercustom rounded-[1em] w-fit h-fit flex items-center justify-center bg-surface hover:border-accent transition duration-200" data-close>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 p-4 w-[4em] h-auto group-hover:text-accent transition duration-500">
             <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
           </svg>
@@ -1588,6 +1614,31 @@
         <section class="rounded-[30px] relative h-full p-6 bg-background-blur text-text pt-8 px-8">
           <h2 class="text-3xl font-semibold text-white mb-4">Smirates of the Smaribean Smea</h2>
           <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
+
+            <div class="text-xl col-span-12 md:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+              <p class="text-muted">Welcome to this section of the website where more detailed information will soon be available. For now, this space serves as a placeholder to help visualize how the final content will be displayed. In the coming weeks, I plan to add descriptions, stories, and insights that highlight my work and experiences. Thank you for your patience as this page is being developed.
+              <br><br>
+                This area is intended to provide visitors with a deeper understanding of the projects and skills showcased throughout the site. As the content is still in progress, the text here is temporary and will be replaced with meaningful updates very soon. I am committed to sharing valuable information that will help you get to know my professional journey better.</p>
+            </div>
+
+            <div class="text-xl col-span-12 md:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl flex flex-col items-center justify-center">
+              <video src="/images/Smirates/GameTrailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
+              <p class="text-muted pt-2">Trailer showcasing Smirates of the Smaribean Smea</p>
+            </div>
+
+
+
+            <div class="text-xl col-span-12 md:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+              <p class="text-muted">Welcome to this section of the website where more detailed information will soon be available. For now, this space serves as a placeholder to help visualize how the final content will be displayed. In the coming weeks, I plan to add descriptions, stories, and insights that highlight my work and experiences. Thank you for your patience as this page is being developed.
+                <br><br>
+                This area is intended to provide visitors with a deeper understanding of the projects and skills showcased throughout the site. As the content is still in progress, the text here is temporary and will be replaced with meaningful updates very soon. I am committed to sharing valuable information that will help you get to know my professional journey better.</p>
+            </div>
+
+            <div class="text-xl col-span-12 md:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+              <p class="text-muted">Welcome to this section of the website where more detailed information will soon be available. For now, this space serves as a placeholder to help visualize how the final content will be displayed. In the coming weeks, I plan to add descriptions, stories, and insights that highlight my work and experiences. Thank you for your patience as this page is being developed.
+                <br><br>
+                This area is intended to provide visitors with a deeper understanding of the projects and skills showcased throughout the site. As the content is still in progress, the text here is temporary and will be replaced with meaningful updates very soon. I am committed to sharing valuable information that will help you get to know my professional journey better.</p>
+            </div>
 
           </div>
         </section>
