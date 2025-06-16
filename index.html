@@ -49,16 +49,10 @@
 </head>
 <body class="relative min-h-screen text-text overflow-y-scroll">
 
-<video id="backgroundVideo" autoplay muted loop playsinline aria-hidden="true" tabindex="-1" class="fixed inset-0 w-full h-full object-cover -z-20">
+<video autoplay muted loop playsinline aria-hidden="true" tabindex="-1" class="disablePictureInPicture fixed inset-0 w-full h-full object-cover -z-20">
   <source src="videos/websiteBackgroundv2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-<script>
-    const bgVideo = document.getElementById('backgroundVideo');
-    if (bgVideo) {
-        bgVideo.disablePictureInPicture = true;
-    }
-</script>
 <div class="fixed inset-0 bg-[url('/images/0001.png')] bg-cover bg-center bg-no-repeat bg-fixed z-[-69]"></div>
 
 <!-- Full Page Flex Container -->
@@ -1659,7 +1653,7 @@
             <div class="text-xl col-span-12 md:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
               <img src="images/Smirates/davinki.png" alt="hello" class="w-full rounded-[1em]">
               <p class="text-muted pt-2">Video editing in Davinci Resolve (<strong>4</strong>)</p>
-              <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="w-full rounded-[1em] mt-4"></video>
+              <video src="/images/Smirates/waterfall.mp4" controls autoplay muted loop class="disablePictureInPicture w-full rounded-[1em] mt-4"></video>
               <p class="text-muted pt-2">Waterfall backdrop, straight from in-game (<strong>5</strong>)</p>
             </div>
 
@@ -1672,7 +1666,12 @@
 
 
 
-
+<script>
+    const bgVideo = document.querySelectorAll('.disablePictureInPicture')[0];
+    if (bgVideo) {
+        bgVideo.disablePictureInPicture = true;
+    }
+</script>
 <script src="js/script.js"></script></body></html>
 <!--
  opacity-100 translate-x-0 transition-all duration-500 ease-in-out
