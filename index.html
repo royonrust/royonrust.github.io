@@ -161,7 +161,7 @@
                            0 0 0 0 0
                            0 0 0 1 0" result="greenOnly"/>
             <!-- Blue channel -->
-            <feOffset in="SourceGraphic" dx="-5" dy="0" result="blue" />
+            <feOffset in="SourceGraphic" dx="-5" dy="1" result="blue" />
             <feColorMatrix in="blue" type="matrix"
                            values="0 0 0 0 0
                            0 0 0 0 0
@@ -726,6 +726,20 @@
                   <div class="scale-100 group-hover:scale-105 transition duration-500 w-full">
                     <img src="icons/StackIcons/html.png" alt="html" class="w-full px-2 h-auto mb-4 pb-4 border-b-2 border-accent">
                     <p class="w-full text-center text-2xl">HTML 5</p>
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 rounded-[2em] transition duration-500 pointer-events-none"></div>
+                  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                         class="w-[30%] text-white opacity-0 group-hover:opacity-100 transition duration-500 drop-shadow-[0_0px_10px_rgba(0,0,0,1)]">
+                      <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </a>
+
+                <a target="_blank"  href="https://www.jetbrains.com/rider/" class="group relative bg-surface rounded-[2em] shadow-xl border-2 border-bordercustom hover:border-accent transition duration-500 p-8 flex flex-col items-center justify-start">
+                  <div class="scale-100 group-hover:scale-105 transition duration-500 w-full">
+                    <img src="icons/StackIcons/css.png" alt="css" class="w-full px-2 h-auto mb-4 pb-4 border-b-2 border-accent">
+                    <p class="w-full text-center text-2xl">CSS</p>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-accent/40 opacity-0 group-hover:opacity-100 rounded-[2em] transition duration-500 pointer-events-none"></div>
                   <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -1843,73 +1857,55 @@
           </button>
 
           <section class="rounded-[30px] relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Efteling GO</h2>
+            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Icebound</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
+              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/banner2.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Icebound banner (<strong>1</strong>)</p>
+              </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
                 <p class="text-muted">Talk about game</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
-              </div>
 
-
-
-              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Efteling/code.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted text-center pt-2">Snippet of the camera script (<strong>2</strong>)</p>
-              </div>
-              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Code</p>
-              </div>
-              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Intro to 3D & Rapunzel tower</p>
-              </div>
-              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <div class="flex flex-row gap-x-4 items-center justify-center">
-                  <img src="images/Efteling/rapunzelblender.png" alt="hello" class="w-[48%] rounded-[1em]">
-                  <img src="images/Efteling/rapunzelunity.png" alt="hello" class="w-[48%] rounded-[1em]">
-                </div>
-                <p class="text-muted text-center pt-2">3D model of Rapunzel's tower (<strong>3</strong>)</p>
-              </div>
-
-              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Efteling/book.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted text-center pt-2">3D animation of the book (<strong>4</strong>)</p>
-              </div>
-              <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explanation about book</p>
-              </div>
-
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted text-center pt-2">All the tree models (<strong>5</strong>)</p>
+              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/Icebound4.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Concept for the physical game (<strong>2</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explanation about trees</p>
+                <p class="text-muted">Talk about concepting</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Efteling/treeunity.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted text-center pt-2">All the tree models in-game (<strong>6</strong>)</p>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/reallife.jpg" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Physical print (<strong>3</strong>)</p>
               </div>
 
-              <div class="text-xl col-span-4 lg:col-span-2 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Efteling/treeblender.png" alt="hello" class="w-full rounded-[1em]">
-                <p class="text-muted text-center pt-2">Audio recordings (<strong>7</strong>)</p>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/actualboardv6.4.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Final board (<strong>4</strong>)</p>
               </div>
-              <div class="text-xl col-span-8 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explanation about audio</p>
+              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Talk about process of making</p>
               </div>
-              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explanation about audio</p>
+              <div class="text-xl col-span-6 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/viewport.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Viewport interface (<strong>5</strong>)</p>
               </div>
-              <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <div class="flex flex-row gap-x-4 items-center justify-center">
-                  <img src="images/Efteling/houseblender.png" alt="hello" class="w-[48%] rounded-[1em]">
-                  <img src="images/Efteling/houseunity.png" alt="hello" class="w-[48%] rounded-[1em]">
-                </div>
-                <p class="text-muted text-center pt-2">3D model of Little Red Riding Hood's house (<strong>8</strong>)</p>
+
+              <div class="text-xl col-span-6 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <video src="/images/Icebound/box.mp4" controls autoplay muted loop class="w-full rounded-[1em] mt-4"></video>
+                <p class="text-muted text-center pt-2">Box concept animation (<strong>6</strong>)</p>
+                <img src="images/Icebound/weight.png" alt="hello" class="w-full rounded-[1em] mt-4">
+                <p class="text-muted text-center pt-2">Weight painting (<strong>7</strong>)</p>
+              </div>
+              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+                <p class="text-muted">Talk about process of making some more</p>
+              </div>
+              <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Icebound/vertice.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Material painting (<strong>8</strong>)</p>
+                <img src="images/Icebound/nodes.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Terrain node setup (<strong>9</strong>)</p>
               </div>
 
             </div>
@@ -1924,15 +1920,15 @@
           </button>
 
           <section class="rounded-[30px] relative h-fit p-6 bg-background-blur text-text pt-8 px-8">
-            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Efteling GO</h2>
+            <h2 class="text-3xl font-semibold text-white mb-4 pr-20">Egg, Inc. UX/UI Redesign</h2>
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
-              <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
+              <div class="text-xl col-span-12 lg:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
                 <p class="text-muted">Talk about game</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <video src="/images/Efteling/trailer.mp4" controls autoplay muted loop class="w-full rounded-[1em]"></video>
-                <p class="text-muted text-center pt-2">Gameplay showcase of Efteling GO (<strong>1</strong>)</p>
+              <div class="text-xl col-span-12 lg:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Egg/banner.png" alt="hello" class="w-full rounded-[1em]">
+                <p class="text-muted text-center pt-2">Egg, Inc. Redesigned (<strong>1</strong>)</p>
               </div>
 
 
