@@ -1825,7 +1825,8 @@
                 <p class="text-muted text-center pt-2">Icebound banner (<strong>1</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-7 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Talk about game</p>
+                <p class="text-muted">As introduction to our course we were assigned to make a physical board game, a slight bummer for someone who wanted to make digital games. However, by making use of mixed meda and 3D tools such as Blender, I was able to still satisfy my own learning aspirations by developing 3D environment skills, the exact skills I came for to learn. <br><br>
+                <em>Icebound</em> is a game that acts as an icebreaker game for first years students just joining the course, hence the name Icebound. The core gameplay revolves around a physical board with 45 steps on which all players place their characters. Each step can have one of three colors, which correspond to the three card categories. On each card a prompt exists, telling the player what to do in order to move forward. The characters the players pick also matter, each one of the characters have a fun ability that modifies the flow of gameplay a bit. Each ability can only be used at a certain point in the track, adding more tension and strategic play to the game. <em>Icebound</em> is a fun, silly game where players get to know each other better. </p>
               </div>
 
               <div class="text-xl col-span-6 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
@@ -1833,7 +1834,7 @@
                 <p class="text-muted text-center pt-2">Concept for the physical game (<strong>2</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Talk about concepting</p>
+                <p class="text-muted">A big part of my role in the team was to 3D model the board, but also concepting how the physical board and box would look like. One such concept, and the one that we stuck with for the final product, is a concept based on combination of the physical board and one plank on which all the cards would be displayed on (<strong>2</strong>).<br><br>The final physical board ended up being a simple printed out version of the 3D model I made (<strong>3</strong>), which was the intention from the start. The physical board ended up being about 50 centimeters in diameter, making it plenty big enough for displaying it on a table and allowing players to participate from all angles.</p>
               </div>
               <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                 <img src="images/Icebound/reallife.jpg" alt="hello" class="w-full rounded-[1em]">
@@ -1845,7 +1846,7 @@
                 <p class="text-muted text-center pt-2">Final board (<strong>4</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Talk about process of making</p>
+                <p class="text-muted">Since this was supposed to be a physical game, I could only do so much using Blender. I ended up making quite a grand 3D environment on which all the steps of the board game would be displayed (<strong>4</strong>). This environment consisted of a mountain range enveloping the map, multiple big forests of different kind of trees, pathways, rivers, and even small details such as little building spread around the map. While I enjoyed making it a lot and learned a tremendous amount because of it, there are argument to be made that the environment was a bit to intense for a simple background of a board game which was feedback we often received. We tried fixing this by layering filters over it later on which tried to make the map look more map-like.</p>
               </div>
               <div class="text-xl col-span-6 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                 <img src="images/Icebound/viewport.png" alt="hello" class="w-full rounded-[1em]">
@@ -1859,7 +1860,10 @@
                 <p class="text-muted text-center pt-2">Weight painting (<strong>7</strong>)</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Talk about process of making some more</p>
+                <p class="text-muted">Another concept I worked on was the physical box of our game (<strong>6</strong>) which was very useful when designing the laser cutting blueprints with which our board ended up being made. The concept consisted of a 3D animation showcasing the layout and how the game elements would fit inside the box.<br><br>
+                To go into some of techniques I learned and used for making the environment:
+                <br>- A weight painting based particle system. The environment made use of multiple forests. I had two versions of forests, and each forest I did not want to occupy the entire map. To solve this I added weight panting for both the forests, making me able to easily control and place thousands of trees (<strong>7</strong>).
+                <br>- Material painting for the main terrain. Since the terrain consisted of multiple types of materials, I needed to have a way to control each of these materials to create different biomes, but also pathways and rivers. I solved this by painting this data onto the terrain (<strong>8</strong>) and connecting this data to a material node setup which assigned the correct materials to the correct paint (<strong>9</strong>).</p>
               </div>
               <div class="text-xl col-span-6 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                 <img src="images/Icebound/vertice.png" alt="hello" class="w-full rounded-[1em]">
@@ -1884,9 +1888,9 @@
             <div class="grid grid-cols-12 gap-8 mx-auto border-t border-border border-bordercustom pt-6">
 
               <div class="text-xl col-span-12 lg:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">As part of our course, I needed to redesign the User Interface of a mobile game. This mobile game being Egg, Inc., a game I had personal experience with already. To tackle my first UX/UI redesign I first had to do a massive amount of research work. <br><br>
-                  Egg Inc (or Egg, Inc.) is a simple idle clicker / simulation game published by Auxbrain Inc. in July 2016 on both iOS and Android platforms. It's main gameplay is base on hatching chickens, having them lays eggs, then shipping these eggs for money. Aka money go up, spent money, more money go up.<br><br>
-                To base my changes on actual research, I analyzed Egg, Inc. based on Nielsen Heuristics, Usability principles, Gestalt principles, and personal experience. I cumulated all of this research in <a href="Resources/UX_UI%20Work%20document%20Roy%20Onrust.pdf"><span class="text-muted hover:text-accent underline transition duration-200">a 10.000-word research document</span></a>.</p>
+                <p class="text-muted">As part of our course, I needed to redesign the User Interface of a mobile game. This mobile game being <em>Egg, Inc.</em>, a game I had personal experience with already. To tackle my first UX/UI redesign (<strong>1</strong>) I first had to do a massive amount of research work. <br><br>
+                  <em>Egg, Inc.</em> is a simple idle clicker / simulation game published by Auxbrain Inc. in July 2016 on both iOS and Android platforms. It's main gameplay is base on hatching chickens, having them lays eggs, then shipping these eggs for money. Aka money go up, spent money, more money go up.<br><br>
+                To base my changes on actual research, I analyzed <em>Egg, Inc.</em> based on Nielsen Heuristics, Usability principles, Gestalt principles, and personal experience. I cumulated all of this research in <a target="_blank" href="Resources/UX_UI%20Work%20document%20Roy%20Onrust.pdf"><span class="text-muted/80 hover:text-accent underline transition duration-200">a 10.000-word research document</span></a>.</p>
               </div>
               <div class="text-xl col-span-12 lg:col-span-6 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
                 <img src="images/Egg/banner.png" alt="hello" class="w-full rounded-[1em]">
@@ -1898,15 +1902,17 @@
                 <p class="text-muted text-center pt-2">Button interactions in Figma (<strong>2</strong>)</p>
               </div>
               <div class="text-xl col-span-8 lg:col-span-5 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explain the Figma</p>
+                <p class="text-muted">To effectively preview the redesign, I made all the screens and interactions in Figma so that it was possible to actually go through the different screens and feel the effect of the UX/UI overhaul. The total amount of screens across low-fi, mid-fi, and hi-fi ended up being exactly 100 with a total amount of interactions climbing into the multiple thousands.<br><br>Shown in the image (<strong>3</strong>) is the hi-fi redesign section of the Figma file. With 4 different variants of 14 different research screens, 19 total progression screens and 12 versions of the main screen. By making the Figma preview so large, it made it very easy to really showcase the redesign to my teachers and peers.</p>
               </div>
-              <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
-                <img src="images/Egg/figma.png" alt="hello" class="w-full rounded-[1em]">
+              <div class="text-xl col-span-4 lg:col-span-3 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
+                <img src="images/Egg/figmasmall.png" alt="hello" class="w-full rounded-[1em]">
                 <p class="text-muted text-center pt-2">Entire Figma overview (<strong>3</strong>)</p>
               </div>
 
               <div class="text-xl col-span-12 bg-surface p-5 rounded-[1em] border-2 border-bordercustom shadow-xl">
-                <p class="text-muted">Explanation about changes made</p>
+                <p class="text-muted">To quickly go over the changes made: For the main screen (<strong>4</strong>) there was a big issue where not all elements where visible enough. I changed this by making extra buttons for elements originally not accessible by the UI and by making the notifications a dropdown rather than the original standalone buttons. The shop, which is practically never used, was also taking up way too much space, I moved this one into the main menu where the placement makes a lot more sense.<br><br>
+                For the egg progression screen (<strong>5</strong>) there was an issue in the original where the overall overview of all the eggs was very hard to grasp and unclear in all the statistics of said eggs. I changed this by introducing more statistics, but also by making the entire list visible by default with descriptions instead of the original small icon list which could be a chore to navigate through.<br><br>
+                The original research screen (<strong>6</strong>) was actually not one of the biggest problems, however through personal experience I could still pinpoint some definite points of improvement. In <em>Egg, Inc.</em> it is very common to prestige and reset all you research, having to rebuy it very very often. In <em>Egg</em>, there is no way to buy upgrades in bulk, I added this as a feature where you can select how much you want to buy (1, 5, 10, MAX). Another big change was the separation of all research tiers, making navigation a lot quicker. </p>
               </div>
 
               <div class="text-xl col-span-12 lg:col-span-4 bg-surface p-5 rounded-[1em] border-2 border-accent shadow-xl flex flex-col items-center justify-center">
